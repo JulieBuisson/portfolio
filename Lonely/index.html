@@ -20,47 +20,58 @@
   <link href="css/style.css" rel="stylesheet">
   <link href="color/default.css" rel="stylesheet">
 
-
   <style>
-
     .scroll-left .align-center {
-     /* position: absolute;
-     width: 100%;
-     height: 100%;
-     margin: 0;
-     line-height: 50px; */
-     text-align: center;
-     /* Starting position */
-     -moz-transform:translateX(100%);
-     -webkit-transform:translateX(100%);	
-     transform:translateX(100%);
-     /* Apply animation to this element */	
-     -moz-animation: scroll-left 15s linear infinite;
-     -webkit-animation: scroll-left 15s linear infinite;
-     animation: scroll-left 15s linear infinite;
+      text-align: center;
+      /* Starting position */
+      -moz-transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+      /* Apply animation to this element */
+      -moz-animation: scroll-left 10s linear infinite;
+      -webkit-animation: scroll-left 10s linear infinite;
+      animation: scroll-left 10s linear infinite;
     }
+
     /* Move it (define the animation) */
     @-moz-keyframes scroll-left {
-     0%   { -moz-transform: translateX(100%); }
-     100% { -moz-transform: translateX(-100%); }
+      0% {
+        -moz-transform: translateX(100%);
+      }
+
+      100% {
+        -moz-transform: translateX(-100%);
+      }
     }
+
     @-webkit-keyframes scroll-left {
-     0%   { -webkit-transform: translateX(100%); }
-     100% { -webkit-transform: translateX(-100%); }
+      0% {
+        -webkit-transform: translateX(100%);
+      }
+
+      100% {
+        -webkit-transform: translateX(-100%);
+      }
     }
+
     @keyframes scroll-left {
-     0%   { 
-     -moz-transform: translateX(100%); /* Browser bug fix */
-     -webkit-transform: translateX(100%); /* Browser bug fix */
-     transform: translateX(100%); 		
-     }
-     100% { 
-     -moz-transform: translateX(-100%); /* Browser bug fix */
-     -webkit-transform: translateX(-100%); /* Browser bug fix */
-     transform: translateX(-100%); 
-     }
+      0% {
+        -moz-transform: translateX(100%);
+        /* Browser bug fix */
+        -webkit-transform: translateX(100%);
+        /* Browser bug fix */
+        transform: translateX(100%);
+      }
+
+      100% {
+        -moz-transform: translateX(-100%);
+        /* Browser bug fix */
+        -webkit-transform: translateX(-100%);
+        /* Browser bug fix */
+        transform: translateX(-100%);
+      }
     }
-    </style>    
+  </style>
 
 </head>
 
@@ -78,8 +89,8 @@
     </div>
     <div class="page-scroll">
       <a href="#about">
-				<i class="fa fa-angle-down fa-5x animated"></i>
-			</a>
+        <i class="fa fa-angle-down fa-5x animated"></i>
+      </a>
     </div>
   </section>
   <!-- /Section: intro -->
@@ -95,7 +106,7 @@
             <div class="navbar-header">
               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
                 <i class="fa fa-bars"></i>
-                </button>
+              </button>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="menu">
@@ -127,7 +138,8 @@
               <h1>WELCOME</h1>
               <h2>My name is Julie</h2>
             </div>
-            <p class="wow bounceInUp" data-wow-delay="0.3s">I'm 23 years old from a little city near Rouen and I really like my job.</p>
+            <p class="wow bounceInUp" data-wow-delay="0.3s">I'm 23 years old from a little city near Rouen and I really
+              like my job.</p>
           </div>
 
         </div>
@@ -143,10 +155,13 @@
         <div class="col-md-6">
           <p><strong>You'll fall in love with me at the first sight</strong></p>
           <p>
-            Lorem ipsum dolor sit amet, ei purto tamquam ceteros his, eos in graece posidonium. Ex nullam vidisse salutatus sed, ea persius phaedrum tincidunt vel. Option virtute nonumes ne est. Id homero expetendis eam, dictas rationibus ut has.
+            Lorem ipsum dolor sit amet, ei purto tamquam ceteros his, eos in graece posidonium. Ex nullam vidisse
+            salutatus sed, ea persius phaedrum tincidunt vel. Option virtute nonumes ne est. Id homero expetendis eam,
+            dictas rationibus ut has.
           </p>
           <blockquote>
-            Pri pertinacia elaboraret te, an eirmod delicatissimi nec. Eu liber quodsi maiorum mei. Civibus perfecto rationibus id his, est noster nostrud aliquando at.
+            Pri pertinacia elaboraret te, an eirmod delicatissimi nec. Eu liber quodsi maiorum mei. Civibus perfecto
+            rationibus id his, est noster nostrud aliquando at.
           </blockquote>
           <a href="#gallery" class="btn btn-skin btn-lg btn-scroll">See my photos</a>
         </div>
@@ -158,155 +173,15 @@
   <!-- Section: separator -->
   <section id="separator" class="home-section parallax text-center" data-stellar-background-ratio="0.5">
 
-    <div class="scroll-left container">
-      <div class="row">
+    <div class="carousel"></div>
+    <script>
+      var x = 0;
+      setInterval(function() {
+        document.querySelector('.carousel').style.backgroundPositionX = x + "px";
+        x += 1;
+      }, 20);
+    </script>
 
-        <div class="logo col-xs-6 col-sm-3 col-md-3">
-          <div class="align-center txt-shadow">
-            <div class="icon">
-              <img src="img/logos/logo_html.png" alt="">
-            </div>
-            <span class="color-white">HTML</span>
-          </div>
-        </div>
-
-        <div class="logo col-xs-6 col-sm-3 col-md-3">
-          <div class="align-center txt-shadow">
-            <div class="icon">
-              <img src="img/logos/logo_css.png" alt="">
-            </div>
-            <span class="color-white">CSS</span>
-          </div>
-        </div>
-
-        <div class="logo col-xs-6 col-sm-3 col-md-3">
-          <div class="align-center txt-shadow">
-            <div class="icon">
-              <img src="img/logos/logo_js.png" alt="">
-            </div>
-            <span class="color-white">Javascript</span>
-          </div>
-        </div>
-
-        <div class="logo col-xs-6 col-sm-3 col-md-3">
-          <div class="align-center txt-shadow">
-            <div class="icon">
-              <img src="img/logos/logo_php.png" alt="">
-            </div>
-            <span class="color-white">PHP</span>
-          </div>
-        </div>
-
-        <div class="logo col-xs-6 col-sm-3 col-md-3">
-          <div class="align-center txt-shadow">
-            <div class="icon">
-              <img src="img/logos/logo_mysql.png" alt="">
-            </div>
-            <span class="color-white">My SQL</span>
-          </div>
-        </div>
-
-        <div class="logo col-xs-6 col-sm-3 col-md-3">
-          <div class="align-center txt-shadow">
-            <div class="icon">
-              <img src="img/logos/logo_angular.png" alt="">
-            </div>
-            <span class="color-white">Angular</span>
-          </div>
-        </div>
-
-        <div class="logo col-xs-6 col-sm-3 col-md-3">
-          <div class="align-center txt-shadow">
-            <div class="icon">
-              <img src="img/logos/logo_node.png" alt="">
-            </div>
-            <span class="color-white">NodeJS</span>
-          </div>
-        </div>
-
-        <div class="logo col-xs-6 col-sm-3 col-md-3">
-          <div class="align-center txt-shadow">
-            <div class="icon">
-              <img src="img/logos/logo_bootstrap.png" alt="">
-            </div>
-            <span class="color-white">Bootstrap</span>
-          </div>
-        </div>
-
-        <div class="logo col-xs-6 col-sm-3 col-md-3">
-          <div class="align-center txt-shadow">
-            <div class="icon">
-              <img src="img/logos/logo_wordpress.png" alt="">
-            </div>
-            <span class="color-white">Wordpress</span>
-          </div>
-        </div>
-
-        <div class="logo col-xs-6 col-sm-3 col-md-3">
-          <div class="align-center txt-shadow">
-            <div class="icon">
-              <img src="img/logos/logo_ajax.png" alt="">
-            </div>
-            <span class="color-white">Ajax</span>
-          </div>
-        </div>
-
-        <div class="logo col-xs-6 col-sm-3 col-md-3">
-          <div class="align-center txt-shadow">
-            <div class="icon">
-              <img src="img/logos/logo_github.png" alt="">
-            </div>
-            <span class="color-white">Github</span>
-          </div>
-        </div>
-
-        <div class="logo col-xs-6 col-sm-3 col-md-3">
-          <div class="align-center txt-shadow">
-            <div class="icon">
-              <img src="img/logos/logo_json.png" alt="">
-            </div>
-            <span class="color-white">Json</span>
-          </div>
-        </div>
-
-        <div class="logo col-xs-6 col-sm-3 col-md-3">
-          <div class="align-center txt-shadow">
-            <div class="icon">
-              <img src="img/logos/logo_symfony.png" alt="">
-            </div>
-            <span class="color-white">Symfony</span>
-          </div>
-        </div>
-
-        <div class="logo col-xs-6 col-sm-3 col-md-3">
-          <div class="align-center txt-shadow">
-            <div class="icon">
-              <img src="img/logos/logo_gimp.png" alt="">
-            </div>
-            <span class="color-white">Gimp</span>
-          </div>
-        </div>
-
-        <div class="logo col-xs-6 col-sm-3 col-md-3">
-          <div class="align-center txt-shadow">
-            <div class="icon">
-              <img src="img/logos/logo_xampp.png" alt="">
-            </div>
-            <span class="color-white">Xampp</span>
-          </div>
-        </div>
-
-        <div class="logo col-xs-6 col-sm-3 col-md-3">
-          <div class="align-center txt-shadow">
-            <div class="icon">
-              <img src="img/logos/logo_ai.png" alt="">
-            </div>
-            <span class="color-white">Illustrator</span>
-          </div>
-        </div>
-        
-      </div>
-    </div>
   </section>
   <!-- /Section: separator -->
 
@@ -332,14 +207,30 @@
         <div class="col-sm-12 col-md-12 col-lg-12">
           <div class="wow bounceInUp" data-wow-delay="0.4s">
             <div id="owl-works" class="owl-carousel">
-              <div class="item"><a href="img/gallery/1.jpg" title="This is an image title" data-lightbox-gallery="gallery1"><img src="img/gallery/1.jpg" class="img-responsive" alt="img"></a></div>
-              <div class="item"><a href="img/gallery/2.jpg" title="This is an image title" data-lightbox-gallery="gallery1"><img src="img/gallery/2.jpg" class="img-responsive " alt="img"></a></div>
-              <div class="item"><a href="img/gallery/3.jpg" title="This is an image title" data-lightbox-gallery="gallery1"><img src="img/gallery/3.jpg" class="img-responsive " alt="img"></a></div>
-              <div class="item"><a href="img/gallery/4.jpg" title="This is an image title" data-lightbox-gallery="gallery1"><img src="img/gallery/4.jpg" class="img-responsive " alt="img"></a></div>
-              <div class="item"><a href="img/gallery/5.jpg" title="This is an image title" data-lightbox-gallery="gallery1"><img src="img/gallery/5.jpg" class="img-responsive " alt="img"></a></div>
-              <div class="item"><a href="img/gallery/6.jpg" title="This is an image title" data-lightbox-gallery="gallery1"><img src="img/gallery/6.jpg" class="img-responsive " alt="img"></a></div>
-              <div class="item"><a href="img/gallery/7.jpg" title="This is an image title" data-lightbox-gallery="gallery1"><img src="img/gallery/7.jpg" class="img-responsive " alt="img"></a></div>
-              <div class="item"><a href="img/gallery/8.jpg" title="This is an image title" data-lightbox-gallery="gallery1"><img src="img/gallery/8.jpg" class="img-responsive " alt="img"></a></div>
+              <div class="item"><a href="img/gallery/1.jpg" title="This is an image title"
+                  data-lightbox-gallery="gallery1"><img src="img/gallery/1.jpg" class="img-responsive" alt="img"></a>
+              </div>
+              <div class="item"><a href="img/gallery/2.jpg" title="This is an image title"
+                  data-lightbox-gallery="gallery1"><img src="img/gallery/2.jpg" class="img-responsive " alt="img"></a>
+              </div>
+              <div class="item"><a href="img/gallery/3.jpg" title="This is an image title"
+                  data-lightbox-gallery="gallery1"><img src="img/gallery/3.jpg" class="img-responsive " alt="img"></a>
+              </div>
+              <div class="item"><a href="img/gallery/4.jpg" title="This is an image title"
+                  data-lightbox-gallery="gallery1"><img src="img/gallery/4.jpg" class="img-responsive " alt="img"></a>
+              </div>
+              <div class="item"><a href="img/gallery/5.jpg" title="This is an image title"
+                  data-lightbox-gallery="gallery1"><img src="img/gallery/5.jpg" class="img-responsive " alt="img"></a>
+              </div>
+              <div class="item"><a href="img/gallery/6.jpg" title="This is an image title"
+                  data-lightbox-gallery="gallery1"><img src="img/gallery/6.jpg" class="img-responsive " alt="img"></a>
+              </div>
+              <div class="item"><a href="img/gallery/7.jpg" title="This is an image title"
+                  data-lightbox-gallery="gallery1"><img src="img/gallery/7.jpg" class="img-responsive " alt="img"></a>
+              </div>
+              <div class="item"><a href="img/gallery/8.jpg" title="This is an image title"
+                  data-lightbox-gallery="gallery1"><img src="img/gallery/8.jpg" class="img-responsive " alt="img"></a>
+              </div>
             </div>
           </div>
         </div>
@@ -362,7 +253,8 @@
               <div class="wow bounceInDown" data-wow-delay="0.4s">
                 <h2>Email or phone are welcome</h2>
               </div>
-              <p class="wow lightSpeedIn" data-wow-delay="0.3s">Gentleman, introduce your self and get in touch with me privately</p>
+              <p class="wow lightSpeedIn" data-wow-delay="0.3s">Gentleman, introduce your self and get in touch with me
+                privately</p>
             </div>
 
           </div>
@@ -378,23 +270,28 @@
             <div id="errormessage"></div>
             <form id="contact-form" action="" method="post" role="form" class="contactForm">
               <div class="form-group">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
+                  data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                 <div class="validation"></div>
               </div>
               <div class="form-group">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"
+                  data-rule="email" data-msg="Please enter a valid email" />
                 <div class="validation"></div>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
+                  data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
                 <div class="validation"></div>
               </div>
               <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                <textarea class="form-control" name="message" rows="5" data-rule="required"
+                  data-msg="Please write something for us" placeholder="Message"></textarea>
                 <div class="validation"></div>
               </div>
 
-              <div class="text-center"><button type="submit" class="btn btn-skin btn-block" id="btnContactUs">Send Message</button></div>
+              <div class="text-center"><button type="submit" class="btn btn-skin btn-block" id="btnContactUs">Send
+                  Message</button></div>
             </form>
           </div>
           <div class="text-center">

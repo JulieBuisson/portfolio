@@ -523,6 +523,16 @@ Parallax
     padding: 0;
 }
 
+.carousel {
+    height: 60vh;
+    width: 80%;
+    background-image: url(../img/logos/car.png);
+    /* background-size: 100%; */
+    background-repeat: repeat-x;
+    margin: auto;
+}
+
+/* @media screen  */
 /* ===========================
 --- Elements
 ============================ */
