@@ -19,59 +19,7 @@
   <link href="css/animate.css" rel="stylesheet" />
   <link href="css/style.css" rel="stylesheet">
   <link href="color/default.css" rel="stylesheet">
-
-  <style>
-    .scroll-left .align-center {
-      text-align: center;
-      /* Starting position */
-      -moz-transform: translateX(100%);
-      -webkit-transform: translateX(100%);
-      transform: translateX(100%);
-      /* Apply animation to this element */
-      -moz-animation: scroll-left 10s linear infinite;
-      -webkit-animation: scroll-left 10s linear infinite;
-      animation: scroll-left 10s linear infinite;
-    }
-
-    /* Move it (define the animation) */
-    @-moz-keyframes scroll-left {
-      0% {
-        -moz-transform: translateX(100%);
-      }
-
-      100% {
-        -moz-transform: translateX(-100%);
-      }
-    }
-
-    @-webkit-keyframes scroll-left {
-      0% {
-        -webkit-transform: translateX(100%);
-      }
-
-      100% {
-        -webkit-transform: translateX(-100%);
-      }
-    }
-
-    @keyframes scroll-left {
-      0% {
-        -moz-transform: translateX(100%);
-        /* Browser bug fix */
-        -webkit-transform: translateX(100%);
-        /* Browser bug fix */
-        transform: translateX(100%);
-      }
-
-      100% {
-        -moz-transform: translateX(-100%);
-        /* Browser bug fix */
-        -webkit-transform: translateX(-100%);
-        /* Browser bug fix */
-        transform: translateX(-100%);
-      }
-    }
-  </style>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css" rel="stylesheet">
 
 </head>
 
@@ -85,7 +33,7 @@
   <section id="intro" class="intro">
 
     <div class="slogan">
-      <a href="index.html"><img width='250px' src="img/logos/logo julie 3.png" alt="" /></a>
+      <a href="index.php"><img width='250px' src="img/logos/logo julie 3.png" alt="" /></a>
     </div>
     <div class="page-scroll">
       <a href="#about">
@@ -178,7 +126,7 @@
       var x = 0;
       setInterval(function() {
         document.querySelector('.carousel').style.backgroundPositionX = x + "px";
-        x += 1;
+        x += -1;
       }, 20);
     </script>
 
@@ -207,29 +155,29 @@
         <div class="col-sm-12 col-md-12 col-lg-12">
           <div class="wow bounceInUp" data-wow-delay="0.4s">
             <div id="owl-works" class="owl-carousel">
-              <div class="item"><a href="img/gallery/1.jpg" title="This is an image title"
-                  data-lightbox-gallery="gallery1"><img src="img/gallery/1.jpg" class="img-responsive" alt="img"></a>
+              <div class="item"><a href="img/portfolio/Screenshot_2019-02-01 My Unicorn.png" title="Un jour, une licorne"
+                  data-lightbox-gallery="gallery1"><img src="img/portfolio/Screenshot_2019-02-01 My Unicorn.png" class="img-responsive" alt="licorne"></a>
               </div>
-              <div class="item"><a href="img/gallery/2.jpg" title="This is an image title"
-                  data-lightbox-gallery="gallery1"><img src="img/gallery/2.jpg" class="img-responsive " alt="img"></a>
+              <div class="item"><a href="img/portfolio/Screenshot_2019-01-30 Pop Part.png" title="This is an image title"
+                  data-lightbox-gallery="gallery1"><img src="img/portfolio/Screenshot_2019-01-30 Pop Part.png" class="img-responsive " alt="img"></a>
               </div>
-              <div class="item"><a href="img/gallery/3.jpg" title="This is an image title"
-                  data-lightbox-gallery="gallery1"><img src="img/gallery/3.jpg" class="img-responsive " alt="img"></a>
+              <div class="item"><a href="img/portfolio/Screenshot_2019-01-31 Au Pois Gourmand.png" title="This is an image title"
+                  data-lightbox-gallery="gallery1"><img src="img/portfolio/Screenshot_2019-01-31 Au Pois Gourmand.png" class="img-responsive " alt="img"></a>
               </div>
-              <div class="item"><a href="img/gallery/4.jpg" title="This is an image title"
-                  data-lightbox-gallery="gallery1"><img src="img/gallery/4.jpg" class="img-responsive " alt="img"></a>
+              <div class="item"><a href="img/portfolio/Screenshot_2019-01-30 Forum Vodoo.png" title="This is an image title"
+                  data-lightbox-gallery="gallery1"><img src="img/portfolio/Screenshot_2019-01-30 Forum Vodoo.png" class="img-responsive " alt="img"></a>
               </div>
-              <div class="item"><a href="img/gallery/5.jpg" title="This is an image title"
-                  data-lightbox-gallery="gallery1"><img src="img/gallery/5.jpg" class="img-responsive " alt="img"></a>
+              <div class="item"><a href="img/portfolio/Screenshot_2019-01-30 Jurassic l'Exposition.jpg" title="This is an image title"
+                  data-lightbox-gallery="gallery1"><img src="img/portfolio/Screenshot_2019-01-30 Jurassic l'Exposition.jpg" class="img-responsive " alt="img"></a>
               </div>
-              <div class="item"><a href="img/gallery/6.jpg" title="This is an image title"
-                  data-lightbox-gallery="gallery1"><img src="img/gallery/6.jpg" class="img-responsive " alt="img"></a>
+              <div class="item"><a href="img/portfolio/Screenshot_2019-01-31 Base CDN (Content Delivery Network).jpg" title="This is an image title"
+                  data-lightbox-gallery="gallery1"><img src="img/portfolio/Screenshot_2019-01-31 Base CDN (Content Delivery Network).jpg" class="img-responsive " alt="img"></a>
               </div>
-              <div class="item"><a href="img/gallery/7.jpg" title="This is an image title"
-                  data-lightbox-gallery="gallery1"><img src="img/gallery/7.jpg" class="img-responsive " alt="img"></a>
+              <div class="item"><a href="img/portfolio/Screenshot_2019-01-30 Le Donjon .png" title="This is an image title"
+                  data-lightbox-gallery="gallery1"><img src="img/portfolio/Screenshot_2019-01-30 Le Donjon .png" class="img-responsive " alt="img"></a>
               </div>
-              <div class="item"><a href="img/gallery/8.jpg" title="This is an image title"
-                  data-lightbox-gallery="gallery1"><img src="img/gallery/8.jpg" class="img-responsive " alt="img"></a>
+              <div class="item"><a href="img/portfolio/Screenshot_2019-01-31 Eshop.jpg" title="This is an image title"
+                  data-lightbox-gallery="gallery1"><img src="img/portfolio/Screenshot_2019-01-31 Eshop.jpg" class="img-responsive " alt="img"></a>
               </div>
             </div>
           </div>
