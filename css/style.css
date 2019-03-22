@@ -370,8 +370,8 @@ hr {
     width:100%;
     position:relative;	
 	background: url(../img/bird.jpg) no-repeat top center;
-	background-size: cover;
-    height: 65vh;
+	background-size: contain;
+    height: 80vh;
 }
 
 .banner h1{

@@ -47,6 +47,7 @@
         <i class="fa fa-angle-down fa-5x animated"></i>
       </a>
     </div>
+
   </section>
   <!-- /Section: intro -->
 

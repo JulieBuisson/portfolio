@@ -19,6 +19,10 @@ class AdminController
                 $this->admin();
             }    
         }
+
+        if(isset($_GET['back'])) {
+            $this->renderLayout("backOffice.php");
+        }
     }
 
     public function admin() {
@@ -28,7 +32,7 @@ class AdminController
     public function renderLayout($layout, $parameters = array())
     {
         ob_start();
-        extract($parameters); // permet d'avoir des indices du tableau comme variable
+        ob_get_clean();
 
         require "view/admin/$layout";
 

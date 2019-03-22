@@ -26,7 +26,15 @@ class Controller
         // }
 
         $page = isset($_GET['page']) ? $_GET['page'] : NULL;
+        
+        if(isset($_GET['admin']) && $_GET['admin'] == "connexion") {
+            $this->renderLayout("admin/connexion.php");
+        }
 
+        if(isset($_GET['back'])) {
+            $this->renderLayout("admin/backOffice.php");
+        }
+        
         if(isset($_GET['lang'])){
             $_SESSION['lang'] = $_GET['lang'];
         }
@@ -43,20 +51,16 @@ class Controller
     public function accueil($lang){
                 
         if(isset($lang) && $lang == "fr") {
-            $this->renderLayout("layout.php", "layout_fr.php");
-        } else {
-            $this->renderLayout("layout.php", "layout_en.php");
+            $this->renderLayout("layout_fr.php");
+        } else if(isset($lang) && $lang == "en") {
+            $this->renderLayout("layout_en.php");
         }
 
     }
-    
-    public function renderLayout($layout, $template, $parameters = array())
+        
+    public function renderLayout($layout, $parameters = array())
     {
         ob_start();
-        extract($parameters); // permet d'avoir des indices du tableau comme variable
-
-        require "view/$template";
-        $content = ob_get_clean(); // tout ce qui se trouve dans le template sera stocké dans $content
 
         require "view/$layout";
         
