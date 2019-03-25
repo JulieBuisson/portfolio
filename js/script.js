@@ -6,21 +6,20 @@ document.querySelector("#back-door").onclick = function (){
     pin -= 1;
 
     console.log("Votre code d'accès est :", pin);
-    console.log("Merci pour votre visite madame @root");
+    console.log("Merci pour votre visite !");
 
-    let pin_prompt = Number(prompt("Veuillez rentrer le mot de passe :"));
+    let pin_prompt = Number(prompt("Veuillez saisir le code secret :"));
 
     if(pin_prompt === pin) {
         let url = "";
 
         if(window.location.href.includes("?")) {
-            console.log("lol");
             url += window.location.href + "&";
         } else {
             url += window.location.href + "?";
         }
 
-        url += "admin=connexion";
+        url += "page=connexion";
 
         window.location.href = url; 
     }

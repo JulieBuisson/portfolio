@@ -47,6 +47,7 @@
         <i class="fa fa-angle-down fa-5x animated"></i>
       </a>
     </div>
+
   </section>
   <!-- /Section: intro -->
 
@@ -93,7 +94,7 @@
               <h1>BIENVENUE</h1>
               <h2>Je m'appelle Julie</h2>
             </div>
-            <p class="wow bounceInUp" data-wow-delay="0.3s">J'ai 23 ans, j'habite dans une petite ville près de Paris et j'adore mon job.</p>
+            <p class="wow bounceInUp" data-wow-delay="0.3s">J'habite dans une petite ville près de Paris et j'adore mon travail.</p>
           </div>
 
         </div>
@@ -107,7 +108,7 @@
           <img src="img/me.jpg" class="img-responsive img-rounded" alt="" />
         </div>
         <div class="col-md-6">
-          <p><strong>You'll fall in love with me at the first sight</strong></p>
+          <p><strong>Laissez moi vous parler un peu de moi.</strong></p>
           <p>
             Lorem ipsum dolor sit amet, ei purto tamquam ceteros his, eos in graece posidonium. Ex nullam vidisse
             salutatus sed, ea persius phaedrum tincidunt vel. Option virtute nonumes ne est. Id homero expetendis eam,
@@ -117,7 +118,7 @@
             Pri pertinacia elaboraret te, an eirmod delicatissimi nec. Eu liber quodsi maiorum mei. Civibus perfecto
             rationibus id his, est noster nostrud aliquando at.
           </blockquote>
-          <a href="#gallery" class="btn btn-skin btn-lg btn-scroll">See my photos</a>
+          <a href="#gallery" class="btn btn-skin btn-lg btn-scroll">Voir mes réalisations</a>
         </div>
       </div>
     </div>
@@ -133,7 +134,7 @@
       setInterval(function() {
         document.querySelector('.carousel').style.backgroundPositionX = x + "px";
         x += -1;
-      }, 20);
+      }, 6);
     </script>
 
   </section>
@@ -148,8 +149,8 @@
         <div class="col-lg-8 col-lg-offset-2">
           <div class="wow bounceInDown" data-wow-delay="0.4s">
             <div class="section-heading">
-              <h2>Portfolio</h2>
-              <p>Take a look at my projects</p>
+              <h2>Réalisations</h2>
+              <p>Jetez un oeil à mes travaux !</p>
             </div>
           </div>
         </div>
@@ -205,10 +206,9 @@
 
             <div class="section-heading">
               <div class="wow bounceInDown" data-wow-delay="0.4s">
-                <h2>Email or phone are welcome</h2>
+                <h2>Et si on faisait connaissance ?</h2>
               </div>
-              <p class="wow lightSpeedIn" data-wow-delay="0.3s">Gentleman, introduce your self and get in touch with me
-                privately</p>
+              <p class="wow lightSpeedIn" data-wow-delay="0.3s">Vous êtes intéressé par une éventuelle collaboration ? Alors n'hésitez pas, contactez moi via ce formulaire !</p>
             </div>
 
           </div>

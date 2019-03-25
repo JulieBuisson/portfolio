@@ -11,8 +11,4 @@ require_once "autoload.php";
 
 $controller = new Controller\Controller; // l'autoload voit passer le mot clef new et fait appel au fichier Controller.php et dans un deuxième temps, dans le controller il y a une instance 'new' de EntityRepository, donc l'autoload fait appel au fichier EntityRepository.php
 
-$adminController = new Controller\AdminController;
-
 $controller->handlerRequest();
-
-$adminController->handlerRequest();

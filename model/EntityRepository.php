@@ -5,7 +5,6 @@ namespace model;
 class EntityRepository
 {
     private $db;
-    public $table;
     public function getDb() // méthode permettant d'instancier la classe PDO et de créer un objet
     {
         if(!$this->db) // seulement si $this->db n'est pas remplie, si il n'y a pas de connexion, alors on la construit
@@ -22,23 +21,28 @@ class EntityRepository
         return $this->db; // on retourne la connexion
     }
 
-    // public function getFields() // méthode permettant de recolter les données des champs/colonnes de la table
-    // {
-    //     $q = $this->getDb()->query("DESC " . $this->table); // DESC : description de la table
-    //     $r = $q->fetchALL(\PDO::FETCH_ASSOC);
-    //     return array_splice($r, 1); // permet de ne pas récupérer le premier champs idEmploye dans le formulaire, dans la BDD grace à la fonction prédéfinie array_splice()
-    // }
+    public function userCheck($email, $mdp) {
+        $q = $this->getDb()->query("SELECT * from user where email='$email' and password='$mdp'");
+        return $q->fetchAll(\PDO::FETCH_ASSOC);
+    }
 
-    // public function selectAll()
-    // {
-    //     $q = $this->getDb()->query("SELECT * FROM " . $this->table); // requete permettant de selectionner toute une table, $this->table : représente dans notre cas la table 'employe'
-    //     $r = $q->fetchAll(\PDO::FETCH_ASSOC);
-    //     return $r;
-    // }
+    public function getFields($table) // méthode permettant de recolter les données des champs/colonnes d'une table
+    {
+        $q = $this->getDb()->query("DESC " . $table); // DESC : description de la table
+        $r = $q->fetchALL(\PDO::FETCH_ASSOC);
+        return array_splice($r, 1); // permet de ne pas récupérer le premier champs id dans le formulaire, dans la BDD grace à la fonction prédéfinie array_splice()
+    }
 
-    // public function save()
-    // {
-    //     $id = isset($_GET['id']) ? $_GET['id'] : 'NULL';
+    public function selectAll($table)
+    {
+        $q = $this->getDb()->query("SELECT * FROM " . $table); // requete permettant de selectionner toute une table
+        $r = $q->fetchAll(\PDO::FETCH_ASSOC);
+        return $r;
+    }
+
+    public function save()
+    {
+        $id = isset($_GET['id']) ? $_GET['id'] : 'NULL';
 
     //     if(!empty($_FILES['avatar']['name'])){
     //         $nom_photo = uniqid() . '-' . $_FILES['avatar']['name'];
@@ -52,14 +56,14 @@ class EntityRepository
 
     //     $_POST['avatar'] = $photoBdd;
 
-    //     $q = $this->getDb()->query("REPLACE INTO " . $this->table . "(id" . ucfirst($this->table) . "," . implode(",", array_keys($_POST)) . ") VALUES (" . $id . "," . "'" . implode("','", $_POST) . "'" . ")");
+        $q = $this->getDb()->query("REPLACE INTO " . $this->table . "(id" . ucfirst($this->table) . "," . implode(",", array_keys($_POST)) . ") VALUES (" . $id . "," . "'" . implode("','", $_POST) . "'" . ")");
 
-    // }
+    }
 
-    // public function delete($id)
-    // {
-    //     $d = $this->getDb()->query("DELETE FROM " . $this->table . " WHERE id" . ucfirst($this->table) . "=" . (int) $id);
-    // }
+    public function delete($id)
+    {
+        $d = $this->getDb()->query("DELETE FROM " . $this->table . " WHERE id" . ucfirst($this->table) . "=" . (int) $id);
+    }
 
     // public function select($id) // méthode permettant de récupérer les données d'un employé via l'id
     // {
