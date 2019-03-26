@@ -391,7 +391,7 @@ hr {
 --- About
 ============================ */
 
-.wow h1 {
+.section-heading h1 {
 	font-weight: bold;
 	font-size: 340%;
 }
@@ -556,7 +556,7 @@ Parallax
 .carousel {
     height: 40vh;
     width: 80%;
-    background-image: url(../img/logos/car.png);
+    background-image: url(../img/car.png);
     background-position-y: 50%;
     /* background-size: 100%; */
     background-repeat: repeat-x;
@@ -571,6 +571,10 @@ backOffice
     background: url('../img/map.jpg');
     background-size: cover;
     background-repeat: repeat-y;
+}
+
+#nav {
+    z-index: 9999;
 }
 
 #contain {

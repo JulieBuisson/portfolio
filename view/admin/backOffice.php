@@ -17,7 +17,7 @@
 </head>
 <body id="back">
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-info position-fixed w-100">
+  <nav class="navbar navbar-expand-lg navbar-light bg-info position-fixed w-100" id="nav">
     <a class="navbar-brand" href="#">Espace admin</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -44,12 +44,34 @@
   <br>
 
   <div class="container" id="contain">
-<?php var_dump($users) ?>
     <div class="jumbotron">
-      <h1 class="display-4">Bienvenue <?=$users['prenom'] . " " . $users['nom']?></h1>
+      <h1 class="display-4">Bienvenue <?=$users["prenom"]?></h1>
+      <hr>
+      <p class="lead">Informations du profil :</p>
       <br>
+      <div class="col-md-10 mx-auto">
+        <ul class="list-group">
+
+          <li class="list-group-item list-group-item-info text-center"><strong><?=$users["prenom"] . " " . $users["nom"]?></strong>
+          <a href="?page=update&id=<?= $value[$id] ?>" class="text-dark float-right">
+          <i class="fas fa-user-edit"></i>
+          </a></li>
+
+          <li class="list-group-item list-group-item-info"><em>Age</em> : <?=$users["age"]?> ans</li>
+
+          <li class="list-group-item list-group-item-info"><em>E-mail</em> : <?=$users["email"]?></li>
+
+          <li class="list-group-item list-group-item-info"><em>Ville</em> : <?=$users["ville"]?></li>
+
+          <li class="list-group-item list-group-item-info"><em>Téléphone</em> : 0<?=$users["phone"]?></li>
+        </ul>
+      </div>
+      <br>
+      <hr>
+      <br>
+      <a class="btn btn-info btn-lg float-right" href="#" role="button">Messagerie <span class="badge badge-info badge-pill">(1)</span></a>
       <p class="lead"><?=$title?></p>
-      <a class="btn btn-info btn-lg float-right" href="#" role="button">Messagerie</a>
+      <div></div>
     </div>
 
     <h3 id="form">Formations</h3>
@@ -187,6 +209,9 @@
     </table>
 
     <div><a href="?page=add" class="btn btn-info btn-large float-right"><i class="fas fa-plus"></i> Ajouter une nouvelle donnée</a></div>
+
+    <br>
+    <br>
 
   </div>
 

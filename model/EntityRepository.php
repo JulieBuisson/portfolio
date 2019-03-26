@@ -35,8 +35,8 @@ class EntityRepository
 
     public function selectAll($table)
     {
-        $q = $this->getDb()->query("SELECT * FROM " . $table); // requete permettant de selectionner toute une table
-        $r = $q->fetchAll(\PDO::FETCH_ASSOC);
+        $q = $this->getDb()->query("SELECT * FROM " . $table); // requete permettant de selectionner toutes les données d'une table
+        $r = $q->fetch();
         return $r;
     }
 
@@ -44,32 +44,32 @@ class EntityRepository
     {
         $id = isset($_GET['id']) ? $_GET['id'] : 'NULL';
 
-    //     if(!empty($_FILES['avatar']['name'])){
-    //         $nom_photo = uniqid() . '-' . $_FILES['avatar']['name'];
+        if(!empty($_FILES['photo']['name'])){
+            $nom_photo = uniqid() . '-' . $_FILES['photo']['name'];
 
-    //         $photoBdd = "http://localhost/POO/13-CRUD/image/$nom_photo";
+            $photoBdd = "http://localhost/portfolio/img/$nom_photo";
 
-    //         $photoDossier = $_SERVER['DOCUMENT_ROOT'] . "/POO/13-CRUD/image/$nom_photo";
+            $photoDossier = $_SERVER['DOCUMENT_ROOT'] . "/portfolio/img/copie/$nom_photo";
 
-    //         copy($_FILES['avatar']['tmp_name'], $photoDossier);
-    //     }
+            copy($_FILES['photo']['tmp_name'], $photoDossier);
+        }
 
-    //     $_POST['avatar'] = $photoBdd;
+        $_POST['photo'] = $photoBdd;
 
-        $q = $this->getDb()->query("REPLACE INTO " . $this->table . "(id" . ucfirst($this->table) . "," . implode(",", array_keys($_POST)) . ") VALUES (" . $id . "," . "'" . implode("','", $_POST) . "'" . ")");
+        $q = $this->getDb()->query("REPLACE INTO " . $table . "(id" . ucfirst($table) . "," . implode(",", array_keys($_POST)) . ") VALUES (" . $id . "," . "'" . implode("','", $_POST) . "'" . ")");
 
     }
 
     public function delete($id)
     {
-        $d = $this->getDb()->query("DELETE FROM " . $this->table . " WHERE id" . ucfirst($this->table) . "=" . (int) $id);
+        $d = $this->getDb()->query("DELETE FROM " . $table . " WHERE id" . ucfirst($table) . "=" . (int) $id);
     }
 
-    // public function select($id) // méthode permettant de récupérer les données d'un employé via l'id
-    // {
-    //     $q = $this->getDb()->query("SELECT * FROM " . $this->table . " WHERE id" . ucfirst($this->table) . "=" . (int) $id);
-    //     $r = $q->fetch(\PDO::FETCH_ASSOC);
-    //     return $r;
-    // }
+    public function select($id) // méthode permettant de récupérer les données d'un employé via l'id
+    {
+        $q = $this->getDb()->query("SELECT * FROM " . $table . " WHERE id" . ucfirst($table) . "=" . (int) $id);
+        $r = $q->fetch(\PDO::FETCH_ASSOC);
+        return $r;
+    }
 
 }

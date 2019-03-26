@@ -40,7 +40,7 @@
     </div>
 
     <div class="slogan">
-      <a href="#"><img width='250px' src="img/logos/logo_julie_3_FR.png" alt="mon logo" /></a>
+      <a href="#"><img width='250px' src="img/logo_julie_3_FR.png" alt="mon logo" /></a>
     </div>
     <div class="page-scroll">
       <a href="#about">
@@ -91,10 +91,10 @@
         <div class="col-lg-8 col-lg-offset-2">
           <div class="section-heading text-center">
             <div class="wow bounceInDown" data-wow-delay="0.2s">
-              <h1>BIENVENUE</h1>
-              <h2>Je m'appelle Julie</h2>
+              <h1><?=$introduction['titre']?></h1>
             </div>
-            <p class="wow bounceInUp" data-wow-delay="0.3s">J'habite dans une petite ville près de Paris et j'adore mon travail.</p>
+              <h2>Je m'appelle Julie</h2>
+            <p>J'habite dans une petite ville près de Paris et j'adore mon travail.</p>
           </div>
 
         </div>
@@ -147,11 +147,9 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
-          <div class="wow bounceInDown" data-wow-delay="0.4s">
-            <div class="section-heading">
-              <h2>Réalisations</h2>
-              <p>Jetez un oeil à mes travaux !</p>
-            </div>
+          <div class="section-heading">
+            <h2>Réalisations</h2>
+            <p>Jetez un oeil à mes travaux !</p>
           </div>
         </div>
       </div>
@@ -160,32 +158,30 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-12">
-          <div class="wow bounceInUp" data-wow-delay="0.4s">
-            <div id="owl-works" class="owl-carousel">
-              <div class="item"><a href="img/portfolio/Screenshot_2019-02-01 My Unicorn.png" title="Un jour, une licorne"
-                  data-lightbox-gallery="gallery1"><img src="img/portfolio/Screenshot_2019-02-01 My Unicorn.png" class="img-responsive" alt="licorne"></a>
-              </div>
-              <div class="item"><a href="img/portfolio/Screenshot_2019-01-30 Pop Part.png" title="PopArt"
-                  data-lightbox-gallery="gallery1"><img src="img/portfolio/Screenshot_2019-01-30 Pop Part.png" class="img-responsive " alt="PopArt Lion"></a>
-              </div>
-              <div class="item"><a href="img/portfolio/Screenshot_2019-01-31 Au Pois Gourmand.png" title="Au pois Gourmand"
-                  data-lightbox-gallery="gallery1"><img src="img/portfolio/Screenshot_2019-01-31 Au Pois Gourmand.png" class="img-responsive " alt="Site restauration"></a>
-              </div>
-              <div class="item"><a href="img/portfolio/Screenshot_2019-01-30 Forum Vodoo.png" title="Forum Vodoo"
-                  data-lightbox-gallery="gallery1"><img src="img/portfolio/Screenshot_2019-01-30 Forum Vodoo.png" class="img-responsive " alt="Vodoo"></a>
-              </div>
-              <div class="item"><a href="img/portfolio/Screenshot_2019-01-30 Jurassic l'Exposition.jpg" title="Exposition Jurassic"
-                  data-lightbox-gallery="gallery1"><img src="img/portfolio/Screenshot_2019-01-30 Jurassic l'Exposition.jpg" class="img-responsive " alt="Jurassic Park"></a>
-              </div>
-              <div class="item"><a href="img/portfolio/Screenshot_2019-01-31 Base CDN (Content Delivery Network).jpg" title="Super Topa"
-                  data-lightbox-gallery="gallery1"><img src="img/portfolio/Screenshot_2019-01-31 Base CDN (Content Delivery Network).jpg" class="img-responsive " alt="Bootstrap"></a>
-              </div>
-              <div class="item"><a href="img/portfolio/Screenshot_2019-01-30 Le Donjon .png" title="Le donjon"
-                  data-lightbox-gallery="gallery1"><img src="img/portfolio/Screenshot_2019-01-30 Le Donjon .png" class="img-responsive " alt="Jeux donjon inspiré Dofus"></a>
-              </div>
-              <div class="item"><a href="img/portfolio/Screenshot_2019-01-31 Eshop.jpg" title="E-Shop"
-                  data-lightbox-gallery="gallery1"><img src="img/portfolio/Screenshot_2019-01-31 Eshop.jpg" class="img-responsive " alt="Boutique EShop"></a>
-              </div>
+          <div id="owl-works" class="owl-carousel">
+            <div class="item"><a href="img/Screenshot_2019-02-01 My Unicorn.png" title="Un jour, une licorne"
+                data-lightbox-gallery="gallery1"><img src="img/Screenshot_2019-02-01 My Unicorn.png" class="img-responsive" alt="licorne"></a>
+            </div>
+            <div class="item"><a href="img/Screenshot_2019-01-30 Pop Part.png" title="PopArt"
+                data-lightbox-gallery="gallery1"><img src="img/Screenshot_2019-01-30 Pop Part.png" class="img-responsive " alt="PopArt Lion"></a>
+            </div>
+            <div class="item"><a href="img/Screenshot_2019-01-31 Au Pois Gourmand.png" title="Au pois Gourmand"
+                data-lightbox-gallery="gallery1"><img src="img/Screenshot_2019-01-31 Au Pois Gourmand.png" class="img-responsive " alt="Site restauration"></a>
+            </div>
+            <div class="item"><a href="img/Screenshot_2019-01-30 Forum Vodoo.png" title="Forum Vodoo"
+                data-lightbox-gallery="gallery1"><img src="img/Screenshot_2019-01-30 Forum Vodoo.png" class="img-responsive " alt="Vodoo"></a>
+            </div>
+            <div class="item"><a href="img/Screenshot_2019-01-30 Jurassic l'Exposition.jpg" title="Exposition Jurassic"
+                data-lightbox-gallery="gallery1"><img src="img/Screenshot_2019-01-30 Jurassic l'Exposition.jpg" class="img-responsive " alt="Jurassic Park"></a>
+            </div>
+            <div class="item"><a href="img/Screenshot_2019-01-31 Base CDN (Content Delivery Network).jpg" title="Super Topa"
+                data-lightbox-gallery="gallery1"><img src="img/Screenshot_2019-01-31 Base CDN (Content Delivery Network).jpg" class="img-responsive " alt="Bootstrap"></a>
+            </div>
+            <div class="item"><a href="img/Screenshot_2019-01-30 Le Donjon .png" title="Le donjon"
+                data-lightbox-gallery="gallery1"><img src="img/Screenshot_2019-01-30 Le Donjon .png" class="img-responsive " alt="Jeux donjon inspiré Dofus"></a>
+            </div>
+            <div class="item"><a href="img/Screenshot_2019-01-31 Eshop.jpg" title="E-Shop"
+                data-lightbox-gallery="gallery1"><img src="img/Screenshot_2019-01-31 Eshop.jpg" class="img-responsive " alt="Boutique EShop"></a>
             </div>
           </div>
         </div>
@@ -205,10 +201,10 @@
           <div class="col-lg-8 col-md-offset-2">
 
             <div class="section-heading">
-              <div class="wow bounceInDown" data-wow-delay="0.4s">
+              <div>
                 <h2>Et si on faisait connaissance ?</h2>
               </div>
-              <p class="wow lightSpeedIn" data-wow-delay="0.3s">Vous êtes intéressé par une éventuelle collaboration ? Alors n'hésitez pas, contactez moi via ce formulaire !</p>
+              <p>Vous êtes intéressé par une éventuelle collaboration ? Alors n'hésitez pas, contactez moi via ce formulaire !</p>
             </div>
 
           </div>
@@ -271,8 +267,8 @@
 
   <!-- Core JavaScript Files -->
   <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.min.js"></script>
   <script src="js/jquery.sticky.js"></script>
   <script src="js/jquery.scrollTo.js"></script>
   <script src="js/stellar.js"></script>

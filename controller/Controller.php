@@ -60,16 +60,40 @@ class Controller
         }
         elseif($page == "out") {
             session_destroy();
-            $this->renderLayout("layout.php", "admin/connexion.php");
+            $this->renderLayout("layout.php", "layout_fr.php");
         }
     }
 
     public function accueil($lang){
                 
         if(isset($lang) && $lang == "fr") {
-            $this->renderLayout("layout_fr.php");
+            $this->renderLayout("layout_fr.php","layout.php", array(
+                "title"=>"Voici l'ensemble des données du site",
+                "introduction"=>$this->db->selectAll("intro_fr"),
+                "intro"=>$this->db->selectAll("intro_en"),
+                "projets"=>$this->db->selectAll("projet"),
+                "projects"=>$this->db->selectAll("project"),
+                "formations"=>$this->db->selectAll("formation"),
+                "forms"=>$this->db->selectAll("form"),
+                "skills"=>$this->db->selectAll("skill"),
+                "competences"=>$this->db->selectAll("competence"),
+                "users"=>$this->db->selectAll("user"),
+                "contact"=>$this->db->selectAll("contact") // affiche l'id d'une table, cela servira a pointer sur l'indice id de la table voulue du tableau de données envoyer dans le layout pour les liens voir/modifier/supprimer
+            ));
         } else if(isset($lang) && $lang == "en") {
-            $this->renderLayout("layout_en.php");
+            $this->renderLayout("layout_en.php", "layout.php", array(
+                "title"=>"Voici l'ensemble des données du site",
+                "introduction"=>$this->db->selectAll("intro_fr"),
+                "intro"=>$this->db->selectAll("intro_en"),
+                "projets"=>$this->db->selectAll("projet"),
+                "projects"=>$this->db->selectAll("project"),
+                "formations"=>$this->db->selectAll("formation"),
+                "forms"=>$this->db->selectAll("form"),
+                "skills"=>$this->db->selectAll("skill"),
+                "competences"=>$this->db->selectAll("competence"),
+                "users"=>$this->db->selectAll("user"),
+                "contact"=>$this->db->selectAll("contact") // affiche l'id d'une table, cela servira a pointer sur l'indice id de la table voulue du tableau de données envoyer dans le layout pour les liens voir/modifier/supprimer
+            ));
         }
 
     }
@@ -92,14 +116,19 @@ class Controller
     public function selectAll()
     {
         $this->renderLayout("layout.php", "admin/backOffice.php", array(
-            "title"=>"Toutes les données",
-            "projets"=>$this->db->selectAll("project"),
+            "title"=>"Voici l'ensemble des données du site",
+            "introduction"=>$this->db->selectAll("intro_fr"),
+            "intro"=>$this->db->selectAll("intro_en"),
+            "projets"=>$this->db->selectAll("projet"),
+            "projects"=>$this->db->selectAll("project"),
             "formations"=>$this->db->selectAll("formation"),
+            "forms"=>$this->db->selectAll("form"),
             "skills"=>$this->db->selectAll("skill"),
+            "competences"=>$this->db->selectAll("competence"),
             "users"=>$this->db->selectAll("user"),
             "contact"=>$this->db->selectAll("contact"),
-            "fields"=>$this->db->getFields(),
-            // "id" => "id" . ucfirst($this->db->table) // affiche l'id d'une table, cela servira a pointer sur l'indice id de la table voulue du tableau de données envoyer dans le layout pour les liens voir/modifier/supprimer
+            "fields"=>$this->db->getFields($_GET['table']),
+            "id" => "id" . ucfirst($this->db->getFields($_GET['table'])) // affiche l'id d'une table, cela servira a pointer sur l'indice id de la table voulue du tableau de données envoyer dans le layout pour les liens voir/modifier/supprimer
         ));
     }
 
@@ -121,7 +150,7 @@ class Controller
             $r = $this->db->save(); // lorque l'on valide le formulaire d'ajout, on execute la methode save() du fichier EntityRepository.php 
             $this->redirect('index.php');
         }
-        $this->render('layout.php', 'donnees-form.php', array(
+        $this->renderLayout('layout.php', 'donnees-form.php', array(
             "title" => "Données : $title",
             "page" => $page,
             "fields" => $this->db->getFields(), // c'est ce qui va nous permettre de récupérer le nom des champs pour les définir de façon générique
@@ -135,6 +164,19 @@ class Controller
         $id = isset($_GET["id"]) ? $_GET['id'] : NULL;
         $d = $this->db->delete($id);
         $this->redirect('index.php');
+    }
+
+    public function select($page)
+    {
+        $id = isset($_GET["id"]) ? $_GET['id'] : NULL;
+        $s = $this->db->select($id);
+
+        $this->render("layout.php", "backOffice.php", array(
+            "title"=>"Données de l'employé : " . $id,
+            "donnees"=>$this->db->select($id),
+            "fields"=>$this->db->getFields(),
+            "id" => "id" . ucfirst($this->db->table),
+        ));
     }
 }
 
