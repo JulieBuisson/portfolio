@@ -41,7 +41,7 @@
     </div>
 
     <div class="slogan">
-      <a href="index.php"><img width='250px' src="img/logos/logo julie 3.png" alt="mon logo" /></a>
+      <a href="index.php"><img width='250px' src="img/logo julie 3.png" alt="mon logo" /></a>
     </div>
     <div class="page-scroll">
       <a href="#about">
@@ -92,9 +92,9 @@
           <div class="section-heading text-center">
             <div class="wow bounceInDown" data-wow-delay="0.2s">
               <h1>WELCOME</h1>
-              <h2>My name is Julie</h2>
             </div>
-            <p class="wow bounceInUp" data-wow-delay="0.3s">I'm 23 years old from a city near Paris and I really like my job.</p>
+              <h2>My name is Julie</h2>
+            <p>I'm 23 years old from a little city near Paris and I really like my job.</p>
           </div>
 
         </div>
@@ -112,11 +112,14 @@
           <p>
             Lorem ipsum dolor sit amet, ei purto tamquam ceteros his, eos in graece posidonium. Ex nullam vidisse
             salutatus sed, ea persius phaedrum tincidunt vel. Option virtute nonumes ne est. Id homero expetendis eam,
-            dictas rationibus ut has.  
+            dictas rationibus ut has.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio quibusdam numquam nostrum doloribus repudiandae earum aperiam dolor provident, quae reprehenderit asperiores facilis, architecto recusandae rem debitis? Quam soluta cumque dicta. Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis debitis quas odit doloribus nihil culpa iste nulla labore deserunt beatae. Et enim nemo reprehenderit pariatur ipsa blanditiis placeat ab reiciendis.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id cupiditate sed nam aliquam, necessitatibus omnis facilis architecto dignissimos magni amet minus cumque molestiae nulla, vel officiis alias repellendus esse beatae! 
           </p>
           <blockquote>
             Pri pertinacia elaboraret te, an eirmod delicatissimi nec. Eu liber quodsi maiorum mei. Civibus perfecto
             rationibus id his, est noster nostrud aliquando at.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla necessitatibus architecto optio tempora veritatis temporibus laborum, quisquam, pariatur saepe dignissimos corporis, maxime illum? Ad aut id, sint asperiores officia natus.
           </blockquote>
           <a href="#gallery" class="btn btn-skin btn-lg btn-scroll">See my photos</a>
         </div>
@@ -147,11 +150,9 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
-          <div class="wow bounceInDown" data-wow-delay="0.4s">
-            <div class="section-heading">
-              <h2>Portfolio</h2>
-              <p>Take a look at my projects</p>
-            </div>
+          <div class="section-heading">
+            <h2>Portfolio</h2>
+            <p>Take a look at my projects</p>
           </div>
         </div>
       </div>
@@ -160,32 +161,30 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-12">
-          <div class="wow bounceInUp" data-wow-delay="0.4s">
-            <div id="owl-works" class="owl-carousel">
-              <div class="item"><a href="img/portfolio/Screenshot_2019-02-01 My Unicorn.png" title="Un jour, une licorne"
-                  data-lightbox-gallery="gallery1"><img src="img/portfolio/Screenshot_2019-02-01 My Unicorn.png" class="img-responsive" alt="licorne"></a>
-              </div>
-              <div class="item"><a href="img/portfolio/Screenshot_2019-01-30 Pop Part.png" title="PopArt"
-                  data-lightbox-gallery="gallery1"><img src="img/portfolio/Screenshot_2019-01-30 Pop Part.png" class="img-responsive " alt="PopArt Lion"></a>
-              </div>
-              <div class="item"><a href="img/portfolio/Screenshot_2019-01-31 Au Pois Gourmand.png" title="Au pois Gourmand"
-                  data-lightbox-gallery="gallery1"><img src="img/portfolio/Screenshot_2019-01-31 Au Pois Gourmand.png" class="img-responsive " alt="Site restauration"></a>
-              </div>
-              <div class="item"><a href="img/portfolio/Screenshot_2019-01-30 Forum Vodoo.png" title="Forum Vodoo"
-                  data-lightbox-gallery="gallery1"><img src="img/portfolio/Screenshot_2019-01-30 Forum Vodoo.png" class="img-responsive " alt="Vodoo"></a>
-              </div>
-              <div class="item"><a href="img/portfolio/Screenshot_2019-01-30 Jurassic l'Exposition.jpg" title="Exposition Jurassic"
-                  data-lightbox-gallery="gallery1"><img src="img/portfolio/Screenshot_2019-01-30 Jurassic l'Exposition.jpg" class="img-responsive " alt="Jurassic Park"></a>
-              </div>
-              <div class="item"><a href="img/portfolio/Screenshot_2019-01-31 Base CDN (Content Delivery Network).jpg" title="Super Topa"
-                  data-lightbox-gallery="gallery1"><img src="img/portfolio/Screenshot_2019-01-31 Base CDN (Content Delivery Network).jpg" class="img-responsive " alt="Bootstrap"></a>
-              </div>
-              <div class="item"><a href="img/portfolio/Screenshot_2019-01-30 Le Donjon .png" title="Le donjon"
-                  data-lightbox-gallery="gallery1"><img src="img/portfolio/Screenshot_2019-01-30 Le Donjon .png" class="img-responsive " alt="Jeux donjon inspiré Dofus"></a>
-              </div>
-              <div class="item"><a href="img/portfolio/Screenshot_2019-01-31 Eshop.jpg" title="E-Shop"
-                  data-lightbox-gallery="gallery1"><img src="img/portfolio/Screenshot_2019-01-31 Eshop.jpg" class="img-responsive " alt="Boutique EShop"></a>
-              </div>
+          <div id="owl-works" class="owl-carousel">
+            <div class="item"><a href="img/Screenshot_2019-02-01 My Unicorn.png" title="Un jour, une licorne"
+                data-lightbox-gallery="gallery1"><img src="img/Screenshot_2019-02-01 My Unicorn.png" class="img-responsive" alt="licorne"></a>
+            </div>
+            <div class="item"><a href="img/Screenshot_2019-01-30 Pop Part.png" title="PopArt"
+                data-lightbox-gallery="gallery1"><img src="img/Screenshot_2019-01-30 Pop Part.png" class="img-responsive " alt="PopArt Lion"></a>
+            </div>
+            <div class="item"><a href="img/Screenshot_2019-01-31 Au Pois Gourmand.png" title="Au pois Gourmand"
+                data-lightbox-gallery="gallery1"><img src="img/Screenshot_2019-01-31 Au Pois Gourmand.png" class="img-responsive " alt="Site restauration"></a>
+            </div>
+            <div class="item"><a href="img/Screenshot_2019-01-30 Forum Vodoo.png" title="Forum Vodoo"
+                data-lightbox-gallery="gallery1"><img src="img/Screenshot_2019-01-30 Forum Vodoo.png" class="img-responsive " alt="Vodoo"></a>
+            </div>
+            <div class="item"><a href="img/Screenshot_2019-01-30 Jurassic l'Exposition.jpg" title="Exposition Jurassic"
+                data-lightbox-gallery="gallery1"><img src="img/Screenshot_2019-01-30 Jurassic l'Exposition.jpg" class="img-responsive " alt="Jurassic Park"></a>
+            </div>
+            <div class="item"><a href="img/Screenshot_2019-01-31 Base CDN (Content Delivery Network).jpg" title="Super Topa"
+                data-lightbox-gallery="gallery1"><img src="img/Screenshot_2019-01-31 Base CDN (Content Delivery Network).jpg" class="img-responsive " alt="Bootstrap"></a>
+            </div>
+            <div class="item"><a href="img/Screenshot_2019-01-30 Le Donjon .png" title="Le donjon"
+                data-lightbox-gallery="gallery1"><img src="img/Screenshot_2019-01-30 Le Donjon .png" class="img-responsive " alt="Jeux donjon inspiré Dofus"></a>
+            </div>
+            <div class="item"><a href="img/Screenshot_2019-01-31 Eshop.jpg" title="E-Shop"
+                data-lightbox-gallery="gallery1"><img src="img/Screenshot_2019-01-31 Eshop.jpg" class="img-responsive " alt="Boutique EShop"></a>
             </div>
           </div>
         </div>
@@ -205,10 +204,8 @@
           <div class="col-lg-8 col-md-offset-2">
 
             <div class="section-heading">
-              <div class="wow bounceInDown" data-wow-delay="0.4s">
-                <h2>Email or phone are welcome</h2>
-              </div>
-              <p class="wow lightSpeedIn" data-wow-delay="0.3s">Gentleman, introduce your self and get in touch with me
+              <h2>Email or phone are welcome</h2>
+              <p>Gentleman, introduce your self and get in touch with me
                 privately</p>
             </div>
 

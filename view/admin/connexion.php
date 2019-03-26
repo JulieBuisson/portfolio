@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="utf-8">
@@ -10,16 +10,10 @@
   <title>Portfolio - Julie Buisson</title>
 
   <!-- CSS -->
-  <link href="../../css/bootstrap.min.css" rel="stylesheet" type="text/css">
-  <link href="../../css/style.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="css/style.css" rel="stylesheet">
 
   <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css" rel="stylesheet">
-
-    <style type="text/css">
-        body {
-            overflow:hidden;
-        }
-    </style>
 
 </head>
 
@@ -27,6 +21,7 @@
 
     <section id="connexion">
         <div class="banner">
+            <?php if(isset($errors)) echo "<h3 class=\"text-center text-danger\">".$errors."</h3>";?>
             <h1 class="text-center text-info">Connexion Admin</h1>
         </div>
         <div id="langue">
@@ -36,23 +31,20 @@
 
     <br>
 
-    <form class="text-center">
+    <form class="text-center" action="" method="post">
         <div class="container">
             <div class="form-group col-md-6">
                 <label for="InputEmail">Adresse E-mail</label>
-                <input type="email" class="form-control" placeholder="Adresse E-mail">
+                <input type="email" name="email" class="form-control" placeholder="Adresse E-mail">
             </div>
             <div class="form-group col-md-6">
                 <label for="InputPassword">Mot de passe</label>
-                <input type="password" class="form-control" placeholder="Mot de passe">
+                <input type="password" name="password" class="form-control" placeholder="Mot de passe">
             </div>
         </div>
         <br>
-        <button type="submit" class="btn btn-info"><a href="?back" class="text-light">
-            Se connecter
-        </a></button>
+        <input type="submit" class="btn btn-info" value="Se connecter"> 
+    
     </form>
-
-    <br>
 
 </body>
