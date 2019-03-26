@@ -19,7 +19,7 @@ document.querySelector("#back-door").onclick = function (){
             url += window.location.href + "?";
         }
 
-        url += "admin=connexion";
+        url += "page=connexion&table=user";
 
         window.location.href = url; 
     }
