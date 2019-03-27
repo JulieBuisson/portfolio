@@ -53,7 +53,7 @@
         <ul class="list-group">
 
           <li class="list-group-item list-group-item-info text-center"><strong><?=$users["prenom"] . " " . $users["nom"]?></strong>
-          <a href="?page=update&id=<?= $value[$id] ?>" class="text-dark float-right">
+          <a href="?page=update&id=<?= $users[$id] ?>" class="text-dark float-right">
           <i class="fas fa-user-edit"></i>
           </a></li>
 
@@ -74,43 +74,36 @@
       <div></div>
     </div>
 
+  <?php var_dump($fields) ?>
     <h3 id="form">Formations</h3>
-    <table class="table">
-      <thead class="thead bg-info">
-          <tr>
-          <th scope="col">#</th>
-          <th scope="col">First</th>
-          <th scope="col">Last</th>
-          <th scope="col">Handle</th>
-          <th>Modifier</th>
-          <th>Supprimer</th>
-          </tr>
-      </thead>
-      <tbody>
-          <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-          <td><a href="?page=update&id=<?= $value[$id] ?>" class="text-light"><i class="fas fa-user-edit"></i></a></td>
-          <td><a href="?page=delete&id=<?= $value[$id] ?>" class="text-light"><i class="fas fa-trash-alt"></i></a></td>
-          </tr>
-          <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-          <td>@mdo</td>
-          </tr>
-          <tr>
-          <th scope="row">3</th>
-          <td>Larry</td>
-          <td>the Bird</td>
-          <td>@twitter</td>
-          <td>@mdo</td>
-          </tr>
-      </tbody>
-    </table>
+    <table class="table table-bordered text-center table-striped table-dark">
+    <thead class="thead bg-info"><tr>
+    <?php
+      foreach($fields as $key => $values):
+        echo "<th>" . $values['Field'] . "</th>"; 
+      endforeach;
+    ?>
+    <th>Modifier</th>
+    <th>Supprimer</th>
+    </tr></thead>
+    <?php
+      foreach($users as $value):
+    ?>
+    <tr>
+      <?php foreach($value as $key => $info): ?>
+      <td><?= $info ?></td>
+      <?php 
+        endforeach; 
+      ?>
+      <td><a href="?page=update&id=<?= $value[$id] ?>" class="text-light"><i class="fas fa-user-edit"></i></a></td>
+      <td><a href="?page=delete&id=<?= $value[$id] ?>" class="text-light"><i class="fas fa-trash-alt"></i></a></td>
+    </tr>
+    </tr>
+    <?php  
+      endforeach;
+    ?>
+
+</table>
 
     <div><a href="?page=add" class="btn btn-info btn-large float-right"><i class="fas fa-plus"></i> Ajouter une nouvelle donnée</a></div>
 

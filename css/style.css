@@ -558,7 +558,7 @@ Parallax
     width: 80%;
     background-image: url(../img/car.png);
     background-position-y: 50%;
-    /* background-size: 100%; */
+    background-size: 120%;
     background-repeat: repeat-x;
     margin: auto;
 }

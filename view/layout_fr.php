@@ -93,8 +93,8 @@
             <div class="wow bounceInDown" data-wow-delay="0.2s">
               <h1><?=$introduction['titre']?></h1>
             </div>
-              <h2>Je m'appelle Julie</h2>
-            <p>J'habite dans une petite ville près de Paris et j'adore mon travail.</p>
+              <h2><?=$introduction['sous-titre']?></h2>
+            <p><?=$introduction['description']?></p>
           </div>
 
         </div>

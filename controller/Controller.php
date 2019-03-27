@@ -19,7 +19,7 @@ class Controller
             if($page == 'add' || $page == 'update') $this->save($page); // si on ajoute ou modifie un élément, on appel la méthode save()
             elseif($page == 'select') $this->select($page); // si on selectionne un élément, on appel la méthode select()
             elseif($page == 'delete') $this->delete($page); // si on supprime un élément, on appel la méthode delete()
-            // else $this->selectAll(); // permettra d'afficher l'ensemble des éléments 
+            //else $this->selectAll(); // permettra d'afficher l'ensemble des éléments 
         }
         catch(Exception $e)
         {
@@ -68,31 +68,19 @@ class Controller
                 
         if(isset($lang) && $lang == "fr") {
             $this->renderLayout("layout_fr.php","layout.php", array(
-                "title"=>"Voici l'ensemble des données du site",
                 "introduction"=>$this->db->selectAll("intro_fr"),
-                "intro"=>$this->db->selectAll("intro_en"),
                 "projets"=>$this->db->selectAll("projet"),
-                "projects"=>$this->db->selectAll("project"),
                 "formations"=>$this->db->selectAll("formation"),
-                "forms"=>$this->db->selectAll("form"),
-                "skills"=>$this->db->selectAll("skill"),
                 "competences"=>$this->db->selectAll("competence"),
-                "users"=>$this->db->selectAll("user"),
-                "contact"=>$this->db->selectAll("contact") // affiche l'id d'une table, cela servira a pointer sur l'indice id de la table voulue du tableau de données envoyer dans le layout pour les liens voir/modifier/supprimer
+                "users"=>$this->db->selectAll("user")
             ));
         } else if(isset($lang) && $lang == "en") {
             $this->renderLayout("layout_en.php", "layout.php", array(
-                "title"=>"Voici l'ensemble des données du site",
-                "introduction"=>$this->db->selectAll("intro_fr"),
                 "intro"=>$this->db->selectAll("intro_en"),
-                "projets"=>$this->db->selectAll("projet"),
                 "projects"=>$this->db->selectAll("project"),
-                "formations"=>$this->db->selectAll("formation"),
                 "forms"=>$this->db->selectAll("form"),
                 "skills"=>$this->db->selectAll("skill"),
-                "competences"=>$this->db->selectAll("competence"),
-                "users"=>$this->db->selectAll("user"),
-                "contact"=>$this->db->selectAll("contact") // affiche l'id d'une table, cela servira a pointer sur l'indice id de la table voulue du tableau de données envoyer dans le layout pour les liens voir/modifier/supprimer
+                "users"=>$this->db->selectAll("user")
             ));
         }
 
@@ -127,8 +115,8 @@ class Controller
             "competences"=>$this->db->selectAll("competence"),
             "users"=>$this->db->selectAll("user"),
             "contact"=>$this->db->selectAll("contact"),
-            "fields"=>$this->db->getFields($_GET['table']),
-            "id" => "id" . ucfirst($this->db->getFields($_GET['table'])) // affiche l'id d'une table, cela servira a pointer sur l'indice id de la table voulue du tableau de données envoyer dans le layout pour les liens voir/modifier/supprimer
+            "fields"=>$this->db->getFields($_GET['table'])
+            // "id" => "id" . ucfirst($this->db->getFields($_GET['table'])) // affiche l'id d'une table, cela servira a pointer sur l'indice id de la table voulue du tableau de données envoyer dans le layout pour les liens voir/modifier/supprimer
         ));
     }
 
