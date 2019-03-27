@@ -30,7 +30,7 @@ class EntityRepository
     {
         $q = $this->getDb()->query("DESC " . $table); // DESC : description de la table
         $r = $q->fetchALL(\PDO::FETCH_ASSOC);
-        return array_splice($r, 1); // permet de ne pas récupérer le premier champs id dans le formulaire, dans la BDD grace à la fonction prédéfinie array_splice()
+        return $r;
     }
 
     public function selectAll($table)
@@ -56,18 +56,18 @@ class EntityRepository
 
         $_POST['photo'] = $photoBdd;
 
-        $q = $this->getDb()->query("REPLACE INTO " . $table . "(id" . ucfirst($table) . "," . implode(",", array_keys($_POST)) . ") VALUES (" . $id . "," . "'" . implode("','", $_POST) . "'" . ")");
+        $q = $this->getDb()->query("REPLACE INTO " . $table . "(id" . $table . "," . implode(",", array_keys($_POST)) . ") VALUES (" . $id . "," . "'" . implode("','", $_POST) . "'" . ")");
 
     }
 
     public function delete($id)
     {
-        $d = $this->getDb()->query("DELETE FROM " . $table . " WHERE id" . ucfirst($table) . "=" . (int) $id);
+        $d = $this->getDb()->query("DELETE FROM " . $table . " WHERE id" . $table . "=" . (int) $id);
     }
 
-    public function select($id) // méthode permettant de récupérer les données d'un employé via l'id
+    public function select($id, $table) // méthode permettant de récupérer les données d'un employé via l'id
     {
-        $q = $this->getDb()->query("SELECT * FROM " . $table . " WHERE id" . ucfirst($table) . "=" . (int) $id);
+        $q = $this->getDb()->query("SELECT * FROM " . $table . " WHERE id" . $table . "=" . (int) $id);
         $r = $q->fetch(\PDO::FETCH_ASSOC);
         return $r;
     }

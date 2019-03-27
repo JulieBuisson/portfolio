@@ -91,10 +91,10 @@
         <div class="col-lg-8 col-lg-offset-2">
           <div class="section-heading text-center">
             <div class="wow bounceInDown" data-wow-delay="0.2s">
-              <h1>WELCOME</h1>
+              <h1><?=$intro['titre']?></h1>
             </div>
-              <h2>My name is Julie</h2>
-            <p>I'm 23 years old from a little city near Paris and I really like my job.</p>
+              <h2><?=$intro['sous-titre']?></h2>
+            <p><?=$intro['description']?></p>
           </div>
 
         </div>
