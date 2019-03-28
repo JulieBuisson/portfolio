@@ -74,7 +74,8 @@ class Controller
                 "competences"=>$this->db->selectAll("competence"),
                 "users"=>$this->db->selectAll("user")
             ));
-        } else if(isset($lang) && $lang == "en") {
+        } 
+        else if(isset($lang) && $lang == "en") {
             $this->renderLayout("layout_en.php", "layout.php", array(
                 "intro"=>$this->db->selectAll("intro_en"),
                 "projects"=>$this->db->selectAll("project"),

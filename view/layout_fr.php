@@ -155,34 +155,41 @@
       </div>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Fancy Box Core JS -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+        <!-- Fancy Box -->
+
     <div class="container">
       <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-12">
-          <div id="owl-works" class="owl-carousel">
-            <div class="item"><a href="img/Screenshot_2019-02-01 My Unicorn.png" title="Un jour, une licorne"
-                data-lightbox-gallery="gallery1"><img src="img/Screenshot_2019-02-01 My Unicorn.png" class="img-responsive" alt="licorne"></a>
-            </div>
-            <div class="item"><a href="img/Screenshot_2019-01-30 Pop Part.png" title="PopArt"
-                data-lightbox-gallery="gallery1"><img src="img/Screenshot_2019-01-30 Pop Part.png" class="img-responsive " alt="PopArt Lion"></a>
-            </div>
-            <div class="item"><a href="img/Screenshot_2019-01-31 Au Pois Gourmand.png" title="Au pois Gourmand"
-                data-lightbox-gallery="gallery1"><img src="img/Screenshot_2019-01-31 Au Pois Gourmand.png" class="img-responsive " alt="Site restauration"></a>
-            </div>
-            <div class="item"><a href="img/Screenshot_2019-01-30 Forum Vodoo.png" title="Forum Vodoo"
-                data-lightbox-gallery="gallery1"><img src="img/Screenshot_2019-01-30 Forum Vodoo.png" class="img-responsive " alt="Vodoo"></a>
-            </div>
-            <div class="item"><a href="img/Screenshot_2019-01-30 Jurassic l'Exposition.jpg" title="Exposition Jurassic"
-                data-lightbox-gallery="gallery1"><img src="img/Screenshot_2019-01-30 Jurassic l'Exposition.jpg" class="img-responsive " alt="Jurassic Park"></a>
-            </div>
-            <div class="item"><a href="img/Screenshot_2019-01-31 Base CDN (Content Delivery Network).jpg" title="Super Topa"
-                data-lightbox-gallery="gallery1"><img src="img/Screenshot_2019-01-31 Base CDN (Content Delivery Network).jpg" class="img-responsive " alt="Bootstrap"></a>
-            </div>
-            <div class="item"><a href="img/Screenshot_2019-01-30 Le Donjon .png" title="Le donjon"
-                data-lightbox-gallery="gallery1"><img src="img/Screenshot_2019-01-30 Le Donjon .png" class="img-responsive " alt="Jeux donjon inspiré Dofus"></a>
-            </div>
-            <div class="item"><a href="img/Screenshot_2019-01-31 Eshop.jpg" title="E-Shop"
-                data-lightbox-gallery="gallery1"><img src="img/Screenshot_2019-01-31 Eshop.jpg" class="img-responsive " alt="Boutique EShop"></a>
-            </div>
+          <script>
+            $('[data-fancybox').fancybox({
+              loop: true,
+              buttons: ["zoom", "share", "slideshow", "fullscreen", "download", "thumbs", "close"],
+              animationEffect: "zoom-in-out"
+            });
+          </script>
+          <div class="item"><a data-fancybox="gallery" href="img/Screenshot_2019-02-01 My Unicorn.png" title="Un jour, une licorne">
+          <img src="img/Screenshot_2019-02-01 My Unicorn.png" class="img-responsive" alt="licorne"></a>
+          </div>
+          <div class="item"><a data-fancybox="gallery" href="img/Screenshot_2019-01-30 Pop Part.png" title="PopArt">
+          <img src="img/Screenshot_2019-01-30 Pop Part.png" class="img-responsive " alt="PopArt Lion"></a>
+          </div>
+          <div class=clear></div>
+          <div class="item"><a data-fancybox="gallery" href="img/Screenshot_2019-01-31 Au Pois Gourmand.png" title="Au pois Gourmand">
+          <img src="img/Screenshot_2019-01-31 Au Pois Gourmand.png" class="img-responsive " alt="Site restauration"></a>
+          </div>
+          <div class="item"><a data-fancybox="gallery" href="img/Screenshot_2019-01-30 Forum Vodoo.png" title="Forum Vodoo">
+          <img src="img/Screenshot_2019-01-30 Forum Vodoo.png" class="img-responsive " alt="Vodoo"></a>
+          </div>
+          <div class=clear></div>
+          <div class="item"><a data-fancybox="gallery" href="img/Screenshot_2019-01-30 Jurassic l'Exposition.jpg" title="Exposition Jurassic">
+          <img src="img/Screenshot_2019-01-30 Jurassic l'Exposition.jpg" class="img-responsive " alt="Jurassic Park"></a>
+          </div>
+          <div class="item"><a data-fancybox="gallery" href="img/Screenshot_2019-01-31 Eshop.jpg" title="E-Shop">
+          <img src="img/Screenshot_2019-01-31 Eshop.jpg" class="img-responsive " alt="Boutique EShop"></a>
           </div>
         </div>
       </div>
@@ -216,36 +223,35 @@
       <div class="row">
         <div class="col-lg-8 col-md-offset-2">
           <div class="form-wrapper marginbot-50">
-            <div id="sendmessage">Your message has been sent. Thank you!</div>
+            <div id="sendmessage">Votre message a été envoyé. Merci !</div>
             <div id="errormessage"></div>
             <form id="contact-form" action="" method="post" role="form" class="contactForm">
               <div class="form-group">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
-                  data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                <input type="text" name="name" class="form-control" id="name" placeholder="Votre Nom"
+                  data-rule="minlen:4" data-msg="Veuillez saisir au moins 4 caractères." />
                 <div class="validation"></div>
               </div>
               <div class="form-group">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"
-                  data-rule="email" data-msg="Please enter a valid email" />
+                <input type="email" class="form-control" name="email" id="email" placeholder="Votre Email"
+                  data-rule="email" data-msg="Entrez une adresse mail valide." />
                 <div class="validation"></div>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
-                  data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Sujet"
+                  data-rule="minlen:4" data-msg="Votre sujet doit contenir au moins 8 caractères." />
                 <div class="validation"></div>
               </div>
               <div class="form-group">
                 <textarea class="form-control" name="message" rows="5" data-rule="required"
-                  data-msg="Please write something for us" placeholder="Message"></textarea>
+                  data-msg="Merci de m'écrire un message." placeholder="Message"></textarea>
                 <div class="validation"></div>
               </div>
 
-              <div class="text-center"><button type="submit" class="btn btn-skin btn-block" id="btnContactUs">Send
-                  Message</button></div>
+              <div class="text-center"><button type="submit" class="btn btn-skin btn-block" id="btnContactUs">Envoyer un message</button></div>
             </form>
           </div>
           <div class="text-center">
-            <p class="lead"><i class="fa fa-phone"></i> Call me +1 888 9796 88</p>
+            <p class="lead"><i class="fa fa-phone"></i> Appelez moi au 06.25.79.09.89</p>
           </div>
         </div>
 
@@ -259,7 +265,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 col-lg-12">
-          <p>&copy; Julie Buisson MCX</p>
+          <a href="#">&copy; Julie Buisson MCX</a>
         </div>
       </div>
     </div>
