@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <script>
+        
+        var choix = Number(prompt("Entrez un nombre."));
+
+document.write("<center>"); //Pour centrer les pyramides
+
+for (var y = 0; y <= choix; ++y) //Pour répéter les pyramides 
+{
+    var random = Math.floor(Math.random() * 2);
+    console.log(random);
+    var color = '';
+    if (random == 0) {
+        color = "lightgreen";
+    }
+    else if (random == 1) {
+        color = 'lightpink';
+    }
+    for (var i = 0; i <= 3 + y * 2; i++) //Une loop, qui compte de 0 à 3 (nombre de rangées d'étoiles)
+    {
+        for (var x = 0; x <= i + y * 2; x++)//Une loop, qui compte de 0 jusqu'à la valeur de i
+        {
+            document.write("<span style='color:" + color + "'>*o*</span>");//Ecrit *o* sur la page
+        }
+        document.write("<br/>"); //Pour revenir à la ligne après chaque rangée d'étoiles
+    }
+}
+document.write('|||||'); //Rajoute un 'tronc' en bas des pyramides
+document.write("</center>"); //Ferme le centrage des pyramides ouvert au début
+    
+    </script>
+    
+</body>
+</html>

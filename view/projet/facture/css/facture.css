@@ -1,0 +1,440 @@
+/* Debut du style et 'reset' du body */
+
+body{
+    margin: 0;
+    width: 100%;
+    background: rgb(214, 212, 212);
+}
+
+/* Header */
+
+h1 {
+    font-size: 230%;
+     
+    margin-bottom: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%;
+    text-align: center;
+}
+
+
+/* Fin du Header */
+/* Partie sur la société émetrices*/
+p{
+    text-transform: uppercase;
+}
+
+ul{
+    width: 40%;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+    margin-bottom: 7px;
+}
+
+li select{
+    width: 242%;
+}
+.input{
+    width: 230%;
+    height: 25px;
+    border: none;
+    border-bottom: 3px solid rgb(214, 212, 212);
+}
+
+#texte{
+    width: 15%;
+    height: 15%;
+    margin: auto;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 130%;
+    background-color: rgb(94, 119, 141);
+    padding: 1%;
+    border-radius: 12%;
+}
+
+#select{
+    width: 40px;
+}
+
+
+.clear{
+    clear: both;
+}
+
+/*Fin de la partie sur les information de la société émetrices */
+/* partie définir les clients*/
+#client{
+    float: left;
+    width: 20%;
+    background-color: rgb(94, 119, 141);
+    border-radius: 10%;
+    padding: 1%;
+    margin-left: 5%;
+}
+
+#client h4{
+    margin-left: 10%;
+    font-weight: bold;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+#client option{
+    width: 230px;
+}
+
+#client input{
+    width: 240%;
+    height: 0%;
+    background-color: rgb(214, 212, 212);
+    border: none;
+    color: black;
+}
+
+#expedition{
+    float: right;
+    margin-right: 5%;
+    width: 20%;
+    background-color: rgb(94, 119, 141);
+    border-radius: 10%;
+    padding: 1%;
+    margin-left: 5%;
+}
+
+#expedition h4{
+    font-weight: bold;
+    font-size: 25px;
+    margin-left: 13%;
+    text-transform: uppercase;
+}
+
+#expedition option{
+    width: 230px;
+}
+
+#expedition input{
+    width: 240%;
+    height: 0%;
+    background-color: rgb(214, 212, 212);
+    border: none;
+    color: black;
+}
+/* fin de la partie clients*/
+
+/* Tableau */
+
+caption {
+    font-weight: bold;
+    font-size: 240%;
+    margin: 4%;
+    margin-bottom: 1%;
+}
+
+table{
+    border: 1px solid black; 
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 90%;
+}
+thead{
+    border : 1px solid black;
+    height: 50px;
+    background: rgb(94, 119, 141);
+}
+
+tfoot{
+    border: 1px solid black;
+    height: 38px;
+}
+
+tbody{
+    border: 1px solid black;
+    height: 38px;
+}
+
+th {
+    border: 1px solid black;
+    width: 0%;
+    font-weight: bold;
+    font-size: 220%;
+}
+
+td{
+    font-size: 100%;
+    border: 1px solid black;
+    text-align: center;
+    padding: 5px;
+    height: 40px;
+}
+
+.produit{
+    width: 80%;
+}
+/* fin du tableau */
+
+/* Début de la partie montant de la facture avec Sous-total & Co */
+
+#sousTotal{
+    width: 90.5%;
+    border-top: 1px solid black;
+    margin-left: 85px;
+    display: flex;
+    justify-content: right;
+}
+
+#sousTotal p{
+    font-size: 25px;
+    width: 100%;
+    text-align: right;
+}
+
+#div div{
+    width: 340px;
+    height: 54px;
+    border: 1px solid black;
+}
+
+#remise{
+    border: 1px solid black;
+    font-size: 25px;
+    width: 90%;
+    margin: auto;
+    display: none;
+ }
+ 
+ #remise p{
+    text-transform: none;
+    text-align: center;
+ }
+
+footer input{
+    border: none;
+}
+
+footer p{
+    text-transform: none;
+}
+/* Fin de la partie montant de la facture avec Sous-total & Co */
+
+
+@media screen and (max-width: 800px) {
+
+body h1 {
+        font-size: 40px;
+        padding: 25px;
+        margin-bottom: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        width: -1px;
+        text-align: center;
+}
+
+#texte {
+    width: 50%;
+    height: 15%;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 23px;
+    background-color: rgb(94, 119, 141);
+    padding: 24px;
+    border-radius: 12%;
+    margin-bottom: 10px;
+}
+
+#expedition {
+    float: right;
+    margin-right: 5%;
+    width: 50%;
+    background-color: rgb(94, 119, 141);
+    border-radius: 10%;
+    padding: 22px;
+    margin-left: 5%;
+}
+
+#client {
+    float: left;
+    width: 50%;
+    background-color: rgb(94, 119, 141);
+    border-radius: 10%;
+    padding: 22px;
+    margin-left: 0%;
+}
+}
+
+@media screen and (max-width: 400px){
+
+    body{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    body h1{
+        margin: 0;
+        text-align: center;
+        width: auto;
+    }
+    /* Premier bloc */
+    p{
+        text-transform: uppercase;
+    }
+    
+    ul{
+        width: 50%;
+        padding: 0;
+    }
+    
+    li{
+        list-style: none;
+        margin-bottom: 7px;
+    
+    }
+    
+    .input{
+        width: 200%;
+        height: auto;
+        border: none;
+        border-bottom: 3px solid rgb(94, 119, 141);
+    }
+    
+    #texte{
+        width: auto;
+        height: auto;
+        margin: auto;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 25px;
+        background-color: rgb(94, 119, 141);
+        padding: 25px;
+        border-radius: 12%;
+    }
+/* Fin 1er bloc */
+/* Début 2eme bloc */
+#client{
+        width: 100%;
+        margin: 0;
+        background-color: rgb(94, 119, 141);
+        border-radius: 12%;
+        margin-top: 5%;
+        padding: 0
+}
+    
+#client h4{
+        font-weight: bold;
+        font-size: 25px;
+        text-transform: uppercase;
+}
+    
+#client option{
+        width: auto;
+}
+#client ul{
+        margin: auto;
+}
+    
+#client input{
+        width: 200px;
+        height: 25px;
+        background-color: rgb(214, 212, 212);
+        border: none;
+        color: black;
+}
+    
+#expedition{
+        margin: 0;
+        width: 100%;
+        background-color: rgb(94, 119, 141);
+        border-radius: 10%;
+        margin-top: 5%;
+        padding: 0;
+}
+    
+#expedition h4{
+        font-weight: bold;
+        font-size: 25px;
+        text-transform: uppercase;
+}
+    
+#expedition option{
+        width: auto;
+}
+#expedition ul{
+        margin: auto;
+}
+    
+#expedition input{
+        width: 200px;
+        height: 25px;
+        background-color: rgb(214, 212, 212);
+        border: none;
+        color: black;
+}
+
+li select{
+    width: 203px;
+}
+
+/* Tableau */
+caption{
+    font-weight: bold;
+    margin: 0;
+    width: 61%;
+}
+table{
+    border: 1px solid black; 
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 50%;
+}
+thead{
+    border : 1px solid black;
+    height: 50px;
+}
+tfoot{
+    border: 1px solid black;
+    height: 38px;
+}
+tbody{
+    border: 1px solid black;
+    height: 38px;
+}
+th{
+    border: 1px solid black;
+    padding: 4px;
+    width: 10%;
+    height: 38px;
+    font-weight: bold;
+    font-size: 29px;
+}
+td{
+    font-size: 100%;
+    border: 1px solid black;
+    text-align: center;
+    padding: 5px;
+    height: 40px;
+}
+/* Fin du tableau */
+#sousTotal{
+    width: 60%;
+    border-top: 1px solid black;
+    margin-left: 85px;
+    display: flex;
+    justify-content: right;
+}
+
+#sousTotal p{
+    font-size: 20px;
+    width: 90%;
+    text-align: right;
+}
+
+#div div{
+    width: 170px;
+    height: 54px;
+    border: 1px solid black;
+}
+}

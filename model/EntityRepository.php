@@ -29,7 +29,7 @@ class EntityRepository
     public function getFields($table) // méthode permettant de recolter les données des champs/colonnes d'une table
     {
         $q = $this->getDb()->query("DESC " . $table); // DESC : description de la table
-        $r = $q->fetchAll(\PDO::FETCH_ASSOC);
+        $r = $q->fetchALL(\PDO::FETCH_ASSOC);
         return $r;
     }
 

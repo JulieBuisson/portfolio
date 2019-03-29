@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Facture</title>
+    <link rel="stylesheet" href="css/facture.css">
+</head>
+
+<body>
+
+    <header>
+
+        <h1>VOTRE FACTURE</h1>
+
+    </header>
+
+    <!-- Partie  : Information sur la société émetrices-->
+
+    <div id="texte">
+        <ul>
+            <li><input type="text" class="input" placeholder="Nom de la société émettrice"></li>
+            <li><input type="text" class="input" placeholder="Adresse de la société"></li>
+            <li><input type="text" class="input" placeholder="Entrez un numéro de téléphone valide"></li>
+            <li><input type="text" class="input" placeholder="Adresse de messagerie"></li>
+        </ul>
+
+        <p>N° de facture <input type="text" id="select" placeholder="01"> </p>
+
+        <label>Date :</label>
+
+        <select name="Day" id="jour"></select>
+        <select name="Month" id="mois"></select>
+        <select name="Year" id="annee"></select>
+
+    </div>
+<!-- fin de la partie des informatiob sur la société émetrices-->
+    <div class="clear"></div>
+<!-- Partie pour définir les clients : Nom de la société, adresse etc-->
+    <section>
+
+        <div id="client">
+            <h4> à : </h4>
+            <ul>
+                <li>
+                    <select id="newClient">
+                        <option>Nouveau client</option>
+                    </select>
+                </li>
+                <li><input type="text" placeholder="Nom de la société"></li>
+                <li><input type="text" placeholder="Nom"></li>
+                <li><input type="text" placeholder="Rue"></li>
+                <li><input type="text" placeholder="Code postal, Ville"></li>
+                <li><input type="text" placeholder="Numéro de téléphone"></li>
+            </ul>
+        </div>
+
+        <div id="expedition">
+            <h4> expédier à : </h4>
+            <ul>
+                <li>
+                    <select name="nouveau client" id="newExpediteur">
+                        <option>Nouveau client</option>
+                    </select>
+                </li>
+                <li><input type="text" placeholder="Nom de la société"></li>
+                <li><input type="text" placeholder="Nom"></li>
+                <li><input type="text" placeholder="Rue"></li>
+                <li><input type="text" placeholder="Code postal, Ville"></li>
+                <li><input type="text" placeholder="Numéro de téléphone"></li>
+            </ul>
+        </div>
+
+    </section>
+<!-- fin de la partie deéfinir les clients-->
+    <div class="clear"></div>
+<!-- Tableaux des poduits-->
+    <main>
+        <table>
+            <caption>Détails des produits facturés</caption>
+            <thead>
+                <tr>
+                    <th>Code produit</th>
+                    <th>Libellé produit</th>
+                    <th>Prix-Unitaire en euros</th>
+                    <th>Quantité commandée</th>
+                    <th>Montant en euros</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>
+                        <select id="produit">
+                            <option></option>
+                        </select>
+                    </td>
+                    <td id="libe1"></td>
+                    <td id="prix1"></td>
+                    <td>
+                        <input id="nbr" type="number" placeholder="0">
+                    </td>
+                    <td id="montant"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <select id="produit2">
+                            <option></option>
+                        </select>
+                    </td>
+                    <td id="libe2"></td>
+                    <td id="prix2"></td>
+                    <td>
+                        <input id="nbr2" type="number" placeholder="0">
+                    </td>
+                    <td id="montant2"></td>
+                </tr>
+            </tbody>
+
+            <tbody>
+                <tr>
+                    <td>
+                        <select id="produit3">
+                            <option></option>
+                        </select>
+                    </td>
+                    <td id="libe3"></td>
+                    <td id="prix3"></td>
+                    <td>
+                        <input id="nbr3" type="number" placeholder="0">
+                    </td>
+                    <td id="montant3"></td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td>
+                        <select id="produit4">
+                            <option></option>
+                        </select>
+                    </td>
+                    <td id="libe4"></td>
+                    <td id="prix4"></td>
+                    <td>
+                        <input id="nbr4" type="number" placeholder="0">
+                    </td>
+                    <td id="montant4"></td>
+                </tr>
+            </tfoot>
+        </table>
+    </main>
+<!-- Fin du Tableaux des produits-->
+<!-- Partie :  Sous-total,t.v.a etc -->
+    <div class="clear"></div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div id="sousTotal">
+        <div id="p">
+            <p>sous-total</p>
+            <p>t.v.a 20,00%</p>
+            <p>port & manutention</p>
+            <p>total du (total ttc)</p>
+        </div>
+        
+        <div id="div">
+            <div id="ss"></div>
+            <div id="tva"></div>
+            <div id="port"></div>
+            <div id="total"></div>
+        </div>
+    </div>
+
+    <div class="clear"></div>
+
+    <div id="remise">
+        <p>N.B. Votre facture a depassé 1000€, vous avez obtenu pour votre prochaine facture une remise de :<span id="remise5"></span>€, représentant 5% de votre commande ci-dessus</p>
+    </div>
+<!-- fin de la partie : Sous-total,t.v.a etc -->
+    <br>
+
+    <br>
+
+    <footer>
+
+        <p>Veuillez rédiger tous les chèques à l'ordre de <input  id="redigerCheque" type="text" placeholder="Nom de la societe"></p>
+
+        <p>Pour toute question concernant cette facture, veuillez contacter : DUPONT au <input id="telephone" type="text" placeholder="Numéro de téléphone">
+            ou à l'adresse <input id="adresse" type="text" placeholder="Adresse"></p>
+
+        <br>
+
+        <br>
+
+        <p class="merci">Nous vous remercions de votre confiance</p>
+
+        <br>
+
+        <br>
+
+        <form>
+
+            <div><button name="B1" onclick="imprimer()">Imprimer cette page</button></div>
+
+        </form>
+    </footer>
+
+    </div>
+
+
+    <script src="js/facture.js"></script>
+
+</body>
+
+</html>

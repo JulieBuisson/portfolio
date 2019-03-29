@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Le Donjon !</title>
+
+    <style>
+    
+        body{
+            text-align: center;
+            color: #ad8aff;
+            margin: 0;
+            padding: 0;
+        }
+        #contenu{
+            background: #1d1d1c;
+            margin: 0 auto;
+            padding-bottom: 50px;
+            width: 60%;
+            border-radius: 10px 10px 10px 10px;
+        }
+        #contenu p{
+            margin: 0;
+            padding: 20px;
+        }
+        img{
+            margin-top: 10px;
+            width: 20%;
+        }
+        .kra{
+            width: 100%;
+        }
+
+    </style>
+</head>
+
+<body>
+<div id="contenu">
+
+    <img class="kra" src="img/Kralamour.png" alt="">
+
+    <div class="jeu"></div>
+    <script type="text/javascript" src="combat.js"></script>
+
+    <button type="button" style="padding: 15px; border-radius:50%; color: blue" id="attaque" onclick=" fight(); attakAdverse();">Attaquer le monstre</button>
+
+    <button type="button" id="soins" style="padding: 15px; border-radius:50%; color: green" onclick="heal();">Utiliser une potion de soin (5)</button>
+
+    <button type="button" id="force" style="padding: 15px; border-radius:50%; color: red" onclick="steroide();">Utiliser une potion de force (3)</button>
+
+</div>
+</body>
+
+</html>

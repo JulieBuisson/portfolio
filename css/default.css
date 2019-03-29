@@ -18,11 +18,6 @@ ul.nav li a:hover {
 	color: #FC5772;
 }
 
-.owl-theme .owl-controls .owl-page.active span,
-.owl-theme .owl-controls.clickable .owl-page:hover span {
-    background-color: #FC5772;
-}
-
 .bg-skin {
 	background: #FC5772;
 }

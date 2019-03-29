@@ -1,0 +1,148 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("../img/background.png");
+    font-family: Arial, sans-serif;
+}
+
+/* Debut du header */
+
+header h2{ 
+    color: white;
+    margin: 0;
+    font-family: 'Courgette', cursive;
+    float: left;
+    padding: 0.5%;
+}
+
+#rosefonce{
+    width: 100%;
+    height: 50px;
+    background-color: #C55394;
+}
+
+nav div{
+    float: right;
+    padding: 1%;
+    text-align: right;
+}
+
+nav a{
+    text-decoration: none;
+    color: #fff;
+    padding: 13px;
+    outline: none;
+}
+
+nav div a:hover{
+    color: #fff;
+    background-color: #EB43A3;
+}
+
+/* Fin du header */
+
+/* Partie Arc-en-ciel + Titre h1 */
+
+section{
+    width: 70%;
+    margin: 0 auto;
+}
+
+section h1{
+    text-align: center;
+    color: #C55394;
+    font-family: 'Courgette', cursive;
+    position: absolute;
+    top: 13%;
+    left: 42%;
+    z-index: 2;
+    font-size: 35px;
+}
+
+section img{
+    position: absolute;
+    top: 8%;
+    left: 35%;
+    z-index: 1;
+}
+
+/* Début du container avec les 3 parties */
+
+#container{
+    position: relative;
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 10%;
+    background-color: #fff;
+    border-radius: 2%;
+    box-shadow: 1px 1px 1px 1px #333;
+    padding: 2%;
+    z-index: 3;
+}
+
+#container h2, h4{
+    color: #EB43A3;
+    font-family: 'Courgette', cursive;
+}
+
+.img{
+    display: inline-flex;
+    margin: 14px;
+    position: relative;
+}
+
+figcaption{
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    background-color: rgba(0, 0, 0, 0.8);
+    bottom: 0;
+    color: white;
+    text-align: center;
+    padding-top: 5%;
+}
+
+#nousTrouver{
+    display: inline-flex;
+}
+
+#infos{
+    margin-left: 3%;
+}
+
+#infos button{
+    padding: 3%;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: #C55394;
+    border-radius: 5px;
+    color: white;
+    border: 1px solid #EB43A3;
+    font-weight: bold;
+}
+
+#infos input{
+    width: 45%;
+    height: 5%;
+}
+
+/* Fin du container */
+
+/* Début du footer */
+
+#roseclair{
+    width: 100%;
+    height: 50px;
+    background-color: #E577B5;
+}
+
+#roseclair p{
+    text-align: right;
+    padding: 1%;
+    padding-bottom: 0;
+    margin-top: 5%;
+    color: white;
+    margin-bottom: 0px;
+}
+
+/* Fin du footer */

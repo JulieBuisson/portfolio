@@ -14,13 +14,13 @@
   <link href="img/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <link href="css/nivo-lightbox.css" rel="stylesheet" />
   <link href="css/nivo-lightbox-theme/default/default.css" rel="stylesheet" type="text/css" />
-  <link href="css/owl.carousel.css" rel="stylesheet" media="screen" />
-  <link href="css/owl.theme.css" rel="stylesheet" media="screen" />
   <link href="css/animate.css" rel="stylesheet" />
   <link href="css/style.css" rel="stylesheet">
   <link href="css/default.css" rel="stylesheet">
 
   <link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.1.0/css/flag-icon.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
 </head>
 
@@ -155,47 +155,101 @@
       </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <!-- Fancy Box Core JS -->
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
-        <!-- Fancy Box -->
-
     <div class="container">
       <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-12">
-          <script>
-            $('[data-fancybox').fancybox({
-              loop: true,
-              buttons: ["zoom", "share", "slideshow", "fullscreen", "download", "thumbs", "close"],
-              animationEffect: "zoom-in-out"
-            });
-          </script>
-          <div class="item"><a data-fancybox="gallery" href="img/Screenshot_2019-02-01 My Unicorn.png" title="Un jour, une licorne">
-          <img src="img/Screenshot_2019-02-01 My Unicorn.png" class="img-responsive" alt="licorne"></a>
+
+          <div class="card" style="width: 32rem; border: 0.5px solid #FC5772; border-radius: 3%; padding: 2%">
+            <img src="img/pop_art.png" class="card-img-top img-responsive" alt="Pop Art">
+            <div class="card-body">
+              <h3 class="card-title">Pop Art</h3>
+              <blockquote>HTML/CSS</blockquote>
+              <a href="view/projet/pop/index.html" class="btn btn-info" target="_blank">Voir</a>
+            </div>
           </div>
-          <div class="item"><a data-fancybox="gallery" href="img/Screenshot_2019-01-30 Pop Part.png" title="PopArt">
-          <img src="img/Screenshot_2019-01-30 Pop Part.png" class="img-responsive " alt="PopArt Lion"></a>
+          
+          <div class="card" style="width: 32rem; border: 0.5px solid #FC5772; border-radius: 3%; padding: 2%">
+            <img src="img/my_unicorn.png" class="card-img-top img-responsive" alt="licorne">
+            <div class="card-body">
+              <h3 class="card-title">My Unicorn</h3>
+              <blockquote>HTML/CSS</blockquote>
+              <a href="view/projet/licorne/index.html" class="btn btn-info" target="_blank">Voir</a>
+            </div>
           </div>
-          <div class=clear></div>
-          <div class="item"><a data-fancybox="gallery" href="img/Screenshot_2019-01-31 Au Pois Gourmand.png" title="Au pois Gourmand">
-          <img src="img/Screenshot_2019-01-31 Au Pois Gourmand.png" class="img-responsive " alt="Site restauration"></a>
+
+          <div class="card" style="width: 32rem; border: 0.5px solid #FC5772; border-radius: 3%; padding: 2%">
+            <img src="img/voodoo.png" class="card-img-top img-responsive" alt="Forum Vodoo">
+            <div class="card-body">
+              <h3 class="card-title">Forum Vodoo</h3>
+              <blockquote>HTML/CSS</blockquote>
+              <a href="view/projet/forum/index.html" class="btn btn-info" target="_blank">Voir</a>
+            </div>
           </div>
-          <div class="item"><a data-fancybox="gallery" href="img/Screenshot_2019-01-30 Forum Vodoo.png" title="Forum Vodoo">
-          <img src="img/Screenshot_2019-01-30 Forum Vodoo.png" class="img-responsive " alt="Vodoo"></a>
+
+          <div class="card" style="width: 32rem; border: 0.5px solid #FC5772; border-radius: 3%; padding: 2%">
+            <img src="img/donjon.png" class="card-img-top img-responsive" alt="Jeu de role">
+            <div class="card-body">
+              <h3 class="card-title">Le donjon</h3>
+              <blockquote>JS</blockquote>
+              <a href="view/projet/jdr/jdr.html" class="btn btn-info" target="_blank">Voir</a>
+            </div>
           </div>
-          <div class=clear></div>
-          <div class="item"><a data-fancybox="gallery" href="img/Screenshot_2019-01-30 Jurassic l'Exposition.jpg" title="Exposition Jurassic">
-          <img src="img/Screenshot_2019-01-30 Jurassic l'Exposition.jpg" class="img-responsive " alt="Jurassic Park"></a>
+
+          <div class="card" style="width: 32rem; border: 0.5px solid #FC5772; border-radius: 3%; padding: 2%">
+            <img src="img/facture.png" class="card-img-top img-responsive" alt="Facture">
+            <div class="card-body">
+              <h3 class="card-title">Facture</h3>
+              <blockquote>JS</blockquote>
+              <a href="view/projet/facture/facture.html" class="btn btn-info" target="_blank">Voir</a>
+            </div>
           </div>
-          <div class="item"><a data-fancybox="gallery" href="img/Screenshot_2019-01-31 Eshop.jpg" title="E-Shop">
-          <img src="img/Screenshot_2019-01-31 Eshop.jpg" class="img-responsive " alt="Boutique EShop"></a>
+
+          <div class="card" style="width: 32rem; border: 0.5px solid #FC5772; border-radius: 3%; padding: 2%">
+            <img src="img/sapin.png" class="card-img-top img-responsive" alt="Sapin">
+            <div class="card-body">
+              <h3 class="card-title">Sapin</h3>
+              <blockquote>JS</blockquote>
+              <a href="view/projet/sapin/index.html" class="btn btn-info" target="_blank">Voir</a>
+            </div>
           </div>
-        </div>
+
+          <div class="card" style="width: 32rem; border: 0.5px solid #FC5772; border-radius: 3%; padding: 2%">
+            <img src="img/pois.png" class="card-img-top img-responsive" alt="Au pois Gourmand">
+            <div class="card-body">
+              <h3 class="card-title">Au Pois Gourmand</h3>
+              <blockquote>PHP</blockquote>
+              <a href="view/projet/atelier/atelier1.php" class="btn btn-info" target="_blank">Voir</a>
+            </div>
+          </div>
+
+          <div class="card" style="width: 32rem; border: 0.5px solid #FC5772; border-radius: 3%; padding: 2%">
+            <img src="img/crud.png" class="card-img-top img-responsive" alt="CRUD">
+            <div class="card-body">
+              <h3 class="card-title">CRUD</h3>
+              <blockquote>POO</blockquote>
+              <a href="view/projet/CRUD/index.php" class="btn btn-info" target="_blank">Voir</a>
+            </div>
+          </div>
+
+          <div class="card" style="width: 32rem; border: 0.5px solid #FC5772; border-radius: 3%; padding: 2%">
+            <img src="img/dn.jpg" class="card-img-top img-responsive" alt="CRUD">
+            <div class="card-body">
+              <h3 class="card-title">Déclics Nutrition</h3>
+              <blockquote>POO</blockquote>
+              <a href="view/projet/dn/view/index.php" class="btn btn-info" target="_blank">Voir</a>
+            </div>
+          </div>
+
+          <br>
+          <div class="clear"></div>
+          <br>
+
+          <span>Et plus encore sur mon <a href="https://github.com/JulieBuisson" target="_blank">GitHub <i class="fab fa-github"></i></a></span>
+
       </div>
     </div>
   </section>
-  <!-- /Section: services -->
+  <!-- /Section: gallery -->
 
 
 
@@ -250,12 +304,10 @@
               <div class="text-center"><button type="submit" class="btn btn-skin btn-block" id="btnContactUs">Envoyer un message</button></div>
             </form>
           </div>
-          <div class="text-center">
-            <p class="lead"><i class="fa fa-phone"></i> Appelez moi au 06.25.79.09.89</p>
-          </div>
         </div>
-
       </div>
+
+      <img src="img/divider.png" alt="divider">
 
     </div>
   </section>
@@ -279,7 +331,6 @@
   <script src="js/jquery.scrollTo.js"></script>
   <script src="js/stellar.js"></script>
   <script src="js/wow.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
   <script src="js/nivo-lightbox.min.js"></script>
   <!-- Custom Theme JavaScript -->
   <script src="js/custom.js"></script>

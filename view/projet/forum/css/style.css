@@ -1,0 +1,45 @@
+body{
+    font-family: 'Sunshiney', cursive;
+}
+
+#container{
+    width: 60%;
+    margin: auto;
+}
+
+#container h1{
+    text-align: center;
+    font-size: 70px;
+}
+
+#container div{
+    display: inline-flex;
+}
+
+#container img{
+    width: 25%;
+}
+
+.demo{
+    background: url(../img/demoniste.jpg) no-repeat;
+    background-size: 300px;
+    background-position: 860px 15px;
+}
+ 
+.demo p{
+    text-transform: uppercase;
+    font-size: 13px !important;
+    word-spacing: 5px;
+    font-family: 'Rock Salt', cursive;
+}
+
+#container p{
+    width: 70%;
+    height: 150px;
+    border: 2px dashed red;
+    display: inline-block;
+    padding-bottom: 150px;
+    margin-top: 50px;
+    padding: 30px;
+    font-size: 32px;
+}

@@ -60,7 +60,13 @@ class Controller
         }
         elseif($page == "out") {
             session_destroy();
-            $this->renderLayout("layout.php", "layout_fr.php");
+            $this->renderLayout("layout_fr.php","layout.php", array(
+                "introduction"=>$this->db->selectAll("intro_fr"),
+                "projets"=>$this->db->selectAll("projet"),
+                "formations"=>$this->db->selectAll("formation"),
+                "competences"=>$this->db->selectAll("competence"),
+                "users"=>$this->db->selectAll("user")
+            ));
         }
     }
 
@@ -74,8 +80,7 @@ class Controller
                 "competences"=>$this->db->selectAll("competence"),
                 "users"=>$this->db->selectAll("user")
             ));
-        } 
-        else if(isset($lang) && $lang == "en") {
+        } else if(isset($lang) && $lang == "en") {
             $this->renderLayout("layout_en.php", "layout.php", array(
                 "intro"=>$this->db->selectAll("intro_en"),
                 "projects"=>$this->db->selectAll("project"),

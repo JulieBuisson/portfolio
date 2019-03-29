@@ -1,0 +1,349 @@
+/* MADE WITH <3 */
+/* Palette de couleurs */
+/* Blue rouge dark-blue vert japonais */
+/* 27bbb2-ef6f6c-223843-59c9a5-beb8eb */
+
+@import url('https://fonts.googleapis.com/css?family=Alef:400,700');
+
+body {color: #333;margin:0; font-family: 'Alef', sans-serif} i {padding: 0} ul {margin:0; padding:0} li {list-style: none} a {text-decoration: none; color: #333}
+
+/* STYLE GENERALE */
+
+.display-5 {
+    font-size: 22px;
+}
+
+.display-4 {
+    font-size: 32px;
+}
+
+.display-3 {
+    font-size: 46px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.btn {
+    box-shadow: 0 5px 10px #ccc;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+.btn-primary {
+    font-weight: bolder;
+    color: #fff;
+    background: #59c9a5;
+}
+
+.w10 {width:10%}.w20 {width:20%}.w35 {width:35%}.w50 {width:50%}.w65 {width:65%}.w80 {width:80%}.w100 {width:100%}
+
+/* END STYLE GENERALE */
+
+header {
+    background-image: url('https://cdn.discordapp.com/attachments/531828014120566797/557521202877300746/the.jpg');
+    background-size: cover;
+    height: 70vh;
+    background-position-y: 70%;
+    padding-top: 30px;
+    box-shadow: 0 3px 20px #ccc;
+    position: relative;
+}
+header:before, header:after{
+    font-family: FontAwesome; font-size: 65px;
+    position: absolute;  transform: translate(-50%);
+    font-weight: bolder; cursor: pointer;
+    color:#fff; text-shadow: 0 0 10px #222;
+}
+header:before {
+    left: 50px;top: 50%; content: "\f100";
+}
+header:after {
+    left: calc(100% - 50px);top: 50%; content: "\f101";
+}
+
+/* NAVIGATION PRINCIPALE */
+
+header nav {
+    position: fixed;
+    width: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+}
+
+header nav ul {
+    width: 100%;
+    height: 100px;
+    background:#fafafafd;
+    /* background:#223843fd; */
+    border-radius: 3px;
+    box-shadow: 0 5px 10px #5552;
+    margin: 0 auto;
+    /* border: 2px solid #efefef; */
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+header nav ul * {
+    margin: 10px;
+    /* color: #efefef !important; */
+
+}
+header nav ul li:last-of-type {
+    /* background: red; */
+    margin-left: auto;
+    /* 
+        <3
+        <3
+        <3
+        <3
+        <3 
+    */
+}
+header .active {
+    border-bottom: 5px solid #223843;
+    border-radius: 0px 0px 5px 5px;
+    color: #223843 !important;
+}
+header nav ul li:last-of-type a:first-of-type {
+    background-color:#f1f1f1;
+}
+header nav ul li:last-of-type a {
+    background-color:#59c9a5;
+}
+header nav ul li:last-of-type a {
+    display: block;
+    margin: 0 5px;
+    padding: 0 10px;
+}
+header nav ul li:last-of-type i {
+    /* background: red; */
+    margin-left: auto;
+}
+header nav ul .active {
+    font-weight: bolder;
+}
+/* END NAVIGATION */
+
+.desc {
+    width: 60%;
+    background:#fafafaee;
+    border-radius: 3px;
+    box-shadow: 0 5px 10px #5552;
+    margin: 150px auto;
+    /* z-index: 2; */
+}
+.desc >  * {
+    padding: 20px;
+}
+
+/* MSG WELCOM */
+
+.msg-welcom {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.msg-welcom hr {
+    width: 60%;
+    box-shadow: 0 0 10px #ccc;
+    opacity: 0.5;
+}
+
+/* END MSG WELCOM */
+
+/* ILLUSTRATIONS */
+
+.content {
+    width: 60%;
+    margin:auto;
+}
+
+.logos {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* END ILLUSTRATIONS */
+
+/* BREAFING */
+
+.breafing {
+    width: 60%;
+    margin:auto;
+}
+
+.br {
+    display: flex;
+    box-shadow: 0 3px 20px #ccc; 
+}
+
+.desc-br {
+    width: 50%;
+    padding: 50px 0px;
+}
+
+.desc-br * {
+    margin: 30px;
+}
+
+.desc-br h4 {
+    margin-top: 0;
+}
+
+.img-br {
+    width: 50%;
+    height: 40vh;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media only Screen and (max-width:1250px) {
+    .br {
+        display: flex;
+        flex-flow: column;
+        flex-direction: column-reverse;
+        margin: 50px 0;
+    }
+    .img-br, .desc-br {
+        width: 100%;
+    }
+
+}
+
+#img-br1 {
+    background-image: url(https://cdn.discordapp.com/attachments/531828014120566797/557557178177814529/salade.jpg);
+}
+#img-br2 {
+    background-image: url(https://cdn.discordapp.com/attachments/531828014120566797/557560306742591488/stone.jpg);
+}
+#img-br3 {
+    background-image: url(https://cdn.discordapp.com/attachments/531828014120566797/557558471529070592/yoage_girl.jpg);
+}
+
+/* END BREAFING */
+
+/* TEMOIGNAGE */
+.temoignage {
+    width: 60%;
+    margin: 100px auto;
+    position: relative;
+    /* z-index: 1; */
+}
+
+.tem {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.tem:before, .tem:after{
+    font-family: FontAwesome; font-size: 32px;
+    position: absolute;  transform: translate(-50%);
+    font-weight: bolder; cursor: pointer;
+}
+/* .tem:before:hover, .tem:after:hover{
+    transition:.4s;
+    color: #fff;
+    transform: scale(2);
+} */
+
+.tem:before {
+    left: 0;top: 50%; content: "\f100";
+}
+.tem:after {
+    left: 100%;top: 50%; content: "\f101";
+}
+
+.tem .titre {
+    font-weight: bolder;
+}
+
+/* END TEMOIGNAGE */
+
+/* FORM CONTACT */
+
+.contact {
+    width: 60%;
+    margin:auto;
+}
+
+.contact form {
+    width:50%;
+    margin: auto;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    background: #fefefe;
+}
+
+.contact form *:not(p){
+    display: block;
+    width: 80%;
+    margin: 30px auto;
+    border:none;
+    border: 1px solid #ddd;
+}
+
+.contact form p{
+    margin: 30px auto;
+    width: 80%;
+    padding:0;
+}
+
+/* .contact form *{
+    display: block;
+    width: 80%;
+    margin: auto;
+} */
+
+.contact form input[type="submit"]{
+    width: 100px;
+    margin: 50px auto 30px;
+}
+
+.contact form textarea {
+    height: 200px;
+    font-family: 'Alef', arial;
+}
+
+/* END FORM CONTACT */
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    background: #223843;
+    margin-top: 100px;
+    padding: 30px 0;
+}
+
+footer * {
+    color: #fff;
+}
+
+footer .reseaux a {
+    display: inline-block;
+    background:#223843;
+    /* border-radius: 10px; */
+    border-top: 5px solid #fff;
+    /* padding-bottom: 5px; */
+    padding: 10px;
+}
+footer .reseaux a:first-of-type {
+    background:#2e4d5c;
+}
+footer .reseaux a:nth-of-type(2) {
+    background:#ef6f6c;
+}
+footer .reseaux a:last-of-type {
+    background:#2767bb;
+}
+footer .reseaux a i {
+    display: block;
+    width: 18px;
+    height: 18px;
+    text-align:center;
+}

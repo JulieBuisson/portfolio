@@ -1,0 +1,51 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #a9f0d1 !important;
+}
+
+#container{
+    width: 60%;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background-image: url(../img/bg.jpg);
+    position: relative;
+}
+
+header{
+    font-family: 'Srisakdi', cursive;
+    padding: 3%;
+}
+
+.fas{
+    color: #6c9986;
+}
+
+.card{
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.card img{
+    height: 200px;
+}
+
+.card h5{
+    font-family: 'Srisakdi', cursive;
+    font-size: 150%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.image img{
+    width: 25%;
+    margin-left: 40%;
+}
+
+footer{
+    text-align: right;
+    padding: 1%;
+    font-family: 'Srisakdi', cursive;
+}
