@@ -47,15 +47,23 @@
     <div class="jumbotron">
       <h1 class="display-4">Bienvenue <?=$users["prenom"]?></h1>
       <hr>
+      <a class="btn btn-info float-right" href="?add" role="button"><i class="fas fa-user-plus"> </i> &nbsp; Ajouter un nouvel utilisateur</a>
       <p class="lead">Informations du profil :</p>
       <br>
       <div class="col-md-10 mx-auto">
         <ul class="list-group">
 
-          <li class="list-group-item list-group-item-info text-center"><strong><?=$users["prenom"] . " " . $users["nom"]?></strong>
-          <a href="?page=update&id=<?= $users[$id] ?>" class="text-dark float-right">
-          <i class="fas fa-user-edit"></i>
-          </a></li>
+          <li class="list-group-item list-group-item-info text-center">
+            <a href="?page=delete&id=<?= $users[$id] ?>" class="text-dark float-left">
+            <i class="fas fa-user-minus"><span>Supprimer l'utilisateur</span></i>
+            </a>
+
+            <strong><?=$users["prenom"] . " " . $users["nom"]?></strong>
+
+            <a href="?page=update&id=<?= $users[$id] ?>" class="text-dark float-right">
+            <i class="fas fa-user-edit"><span>Modifier l'utilisateur</span></i>
+            </a>
+          </li>
 
           <li class="list-group-item list-group-item-info"><em>Age</em> : <?=$users["age"]?> ans</li>
 
@@ -64,17 +72,18 @@
           <li class="list-group-item list-group-item-info"><em>Ville</em> : <?=$users["ville"]?></li>
 
           <li class="list-group-item list-group-item-info"><em>Téléphone</em> : 0<?=$users["phone"]?></li>
+
         </ul>
       </div>
       <br>
       <hr>
       <br>
-      <a class="btn btn-info btn-lg float-right" href="#" role="button">Messagerie <span class="badge badge-info badge-pill">(1)</span></a>
       <p class="lead"><?=$title?></p>
+      <br>
+      <a class="btn btn-info btn-lg float-right" href="#" role="button">Messagerie <span class="badge badge-info badge-pill">(1)</span></a>
       <div></div>
     </div>
 
-  <?php var_dump($fields) ?>
     <h3 id="form">Formations</h3>
     <table class="table table-bordered text-center table-striped table-dark">
     <thead class="thead bg-info"><tr>
@@ -86,126 +95,20 @@
     <th>Modifier</th>
     <th>Supprimer</th>
     </tr></thead>
-    <?php
-      foreach($users as $value):
-    ?>
+    <tbody>
     <tr>
-      <?php foreach($value as $key => $info): ?>
-      <td><?= $info ?></td>
-      <?php 
-        endforeach; 
+      <?php foreach($users as $key => $info): ?>
+      <td> <?=$info?> </td>
+      <?php  
+        endforeach;
       ?>
       <td><a href="?page=update&id=<?= $value[$id] ?>" class="text-light"><i class="fas fa-user-edit"></i></a></td>
       <td><a href="?page=delete&id=<?= $value[$id] ?>" class="text-light"><i class="fas fa-trash-alt"></i></a></td>
     </tr>
-    </tr>
-    <?php  
-      endforeach;
-    ?>
-
-</table>
-
-    <div><a href="?page=add" class="btn btn-info btn-large float-right"><i class="fas fa-plus"></i> Ajouter une nouvelle donnée</a></div>
-
-    <br>
-
-    <h3 id="comp">Compétences</h3>
-    <table class="table">
-      <thead class="thead bg-info">
-          <tr>
-          <th scope="col">#</th>
-          <th scope="col">First</th>
-          <th scope="col">Last</th>
-          <th scope="col">Handle</th>
-          <th>Voir</th>
-          <th>Modifier</th>
-          <th>Supprimer</th>
-          </tr>
-      </thead>
-      <tbody>
-          <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
-          </tr>
-          <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
-          </tr>
-          <tr>
-          <th scope="row">3</th>
-          <td>Larry</td>
-          <td>the Bird</td>
-          <td>@twitter</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
-          </tr>
-      </tbody>
-    </table>
-
-    <div><a href="?page=add" class="btn btn-info btn-large float-right"><i class="fas fa-plus"></i> Ajouter une nouvelle donnée</a></div>
-
-    <br>
-
-    <h3 id="rea">Réalisations</h3>
-    <table class="table">
-      <thead class="thead bg-info">
-          <tr>
-          <th scope="col">#</th>
-          <th scope="col">First</th>
-          <th scope="col">Last</th>
-          <th scope="col">Handle</th>
-          <th>Voir</th>
-          <th>Modifier</th>
-          <th>Supprimer</th>
-          </tr>
-      </thead>
-      <tbody>
-          <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
-          </tr>
-          <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
-          </tr>
-          <tr>
-          <th scope="row">3</th>
-          <td>Larry</td>
-          <td>the Bird</td>
-          <td>@twitter</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
-          <td>@mdo</td>
-          </tr>
-      </tbody>
-    </table>
-
-    <div><a href="?page=add" class="btn btn-info btn-large float-right"><i class="fas fa-plus"></i> Ajouter une nouvelle donnée</a></div>
-
+     </tbody>
+   </table>
     <br>
     <br>
-
   </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

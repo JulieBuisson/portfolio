@@ -60,7 +60,7 @@ class EntityRepository
 
     }
 
-    public function delete($id)
+    public function delete($id, $table)
     {
         $d = $this->getDb()->query("DELETE FROM " . $table . " WHERE id" . $table . "=" . (int) $id);
     }

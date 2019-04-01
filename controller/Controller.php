@@ -151,7 +151,7 @@ class Controller
             "values" => $values, // permet de récupérer toute les données de l'élément en cas de modification
             
         ));
-    }
+    }    
 
     public function delete($page) // fonction permettant de supprimer l'élément selectionné via son id
     {
