@@ -85,28 +85,32 @@
     </div>
 
     <h3 id="form">Formations</h3>
-    <table class="table table-bordered text-center table-striped table-dark">
-    <thead class="thead bg-info"><tr>
-    <?php
-      foreach($fields as $key => $values):
-        echo "<th>" . $values['Field'] . "</th>"; 
-      endforeach;
-    ?>
-    <th>Modifier</th>
-    <th>Supprimer</th>
-    </tr></thead>
-    <tbody>
-    <tr>
-      <?php foreach($users as $key => $info): ?>
-      <td> <?=$info?> </td>
-      <?php  
-        endforeach;
-      ?>
-      <td><a href="?page=update&id=<?= $value[$id] ?>" class="text-light"><i class="fas fa-user-edit"></i></a></td>
-      <td><a href="?page=delete&id=<?= $value[$id] ?>" class="text-light"><i class="fas fa-trash-alt"></i></a></td>
-    </tr>
-     </tbody>
-   </table>
+    <table class="table table-bordered text-center table-striped table-dark table-responsive">
+      <thead class="thead bg-info"><tr>
+        <?php
+          foreach($fields as $key => $values):
+            echo "<th>" . ucfirst($values['Field']) . "</th>"; 
+          endforeach;
+        ?>
+        <th>Modifier</th>
+        <th>Supprimer</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <?php foreach($users as $keys => $infos):
+
+            echo "<td>" . implode("</td><td>",$users) . "</td>";
+
+            echo "<td><a href='?page=update' class='text-light'><i class='fas fa-user-edit'></i></a></td>";
+
+            echo "<td><a href='?page=delete' class='text-light'><i class='fas fa-trash-alt'></i></a></td>";
+
+          endforeach ?>
+        </tr>
+      </tbody>
+    </table>
+    <?php var_dump($users) ?>
     <br>
     <br>
   </div>

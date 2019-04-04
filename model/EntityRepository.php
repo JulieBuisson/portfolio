@@ -36,7 +36,7 @@ class EntityRepository
     public function selectAll($table)
     {
         $q = $this->getDb()->query("SELECT * FROM " . $table); // requete permettant de selectionner toutes les données d'une table
-        $r = $q->fetch();
+        $r = $q->fetch(\PDO::FETCH_ASSOC);
         return $r;
     }
 

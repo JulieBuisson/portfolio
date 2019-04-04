@@ -120,7 +120,7 @@ class Controller
             "skills"=>$this->db->selectAll("skill"),
             "competences"=>$this->db->selectAll("competence"),
             "users"=>$this->db->selectAll("user"),
-            "contact"=>$this->db->selectAll("contact"),
+            "contacts"=>$this->db->selectAll("contact"),
             "fields"=>$this->db->getFields($_GET['table'])
             // "id" => "id" . ucfirst($this->db->getFields($_GET['table'])) // affiche l'id d'une table, cela servira a pointer sur l'indice id de la table voulue du tableau de données envoyer dans le layout pour les liens voir/modifier/supprimer
         ));
